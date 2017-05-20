@@ -1,0 +1,26 @@
+#registerForm {
+	text-align: center;
+	background-color: white;
+	width: 20%;
+}
+body {
+	background-color: #36D7B7;
+}
+form {
+	text-align: center;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
