@@ -10,7 +10,6 @@ body{
 }
 button{
 	height:100%;
-	width:100%;
 	border:none;
 }
 p{
@@ -46,11 +45,13 @@ h1{
 	float:left;
 }
 #register{
+	width:100%;
 	background-color:#2ABB9B;
 	border-left:solid 1em white;
 	border-bottom:solid 1em white;
 }
 #checkin{
+	width:100%;
 	background-color:#36D7B7;
 	border-right:solid 1em white;
 	border-bottom:solid 1em white;
@@ -68,7 +69,19 @@ h1{
 	background-color:#049372;
 }
 #vmugPeople{
-	position:relative;
 	padding-left:1em;
 	height:100%;
+}
+#adminTxt{
+	margin:0;
+	font-size:1em;
+	color:white;
+	font-style:bold;
+}
+#admin{
+	background-color:white;
+	height:50%;
+	margin-top:1%;
+	float:right;
+	margin-right:1em;
 }
