@@ -1,3 +1,8 @@
+<!DOCYTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="">
+
 <html>
 	<body>
 		<form> 
@@ -7,7 +12,14 @@
 		<input type = "text" name="lastname"> <br>
 		Email: <br>
 		<input type="text" name="email"> <br>
+		Company <br>
+		<input type="text" name="company"> <br>
 
+		<input type="radio" name="Options" value="Customer"> Customer 
+		<input type="radio" name="Options" value="VMWare Partner"> VMWare Partner  
+		<input type="radio" name="Options" value="Other Vendor"> Other Vendor
+		<br>
+		<button type="Submit" formmethod="post" formaction="/db.php">Register</button>
 		</form>
 	</body>
 </html>
