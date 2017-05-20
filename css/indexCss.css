@@ -1,0 +1,74 @@
+/* indexCss.css */
+
+/* DEFAULTS */
+html{
+	height:100%;
+}
+body{
+	margin:0;
+	height:100%;
+}
+button{
+	height:100%;
+	width:100%;
+	border:none;
+}
+p{
+	font-size:1.5em;
+	color:white;
+}
+h1{
+	font-size:3em;
+	color:white;
+	position:relative;
+	top:50%;
+	left:50%;
+	transform:translateX(-50%) translateY(-50%);
+}
+
+/* ID's */
+
+#top{
+	background-color:white;
+	height:5%;
+	width:100%;
+}
+#left{
+	background-color:#2ABB9B;
+	height:95%;
+	width:50%;
+	float:left;
+}
+#right{
+	background-color:#36D7B7;
+	height:95%;
+	width:50%;
+	float:left;
+}
+#register{
+	background-color:#2ABB9B;
+	border-left:solid 1em white;
+	border-bottom:solid 1em white;
+}
+#checkin{
+	background-color:#36D7B7;
+	border-right:solid 1em white;
+	border-bottom:solid 1em white;
+}
+#register:hover{
+	background-color:#049372;
+}
+#checkin:hover{
+	background-color:#049372;
+}
+#register:active{
+	background-color:#049372;
+}
+#checkin:active{
+	background-color:#049372;
+}
+#vmugPeople{
+	position:relative;
+	padding-left:1em;
+	height:100%;
+}
