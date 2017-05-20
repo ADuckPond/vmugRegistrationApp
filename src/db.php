@@ -7,7 +7,7 @@
         $lastname = pg_escape_string($_POST['lastname']); 
         $email = pg_escape_string($_POST['email']); 
         $company = pg_escape_string($_POST['company']);
-        $option = pg_escape_string($_POST['option'])
+        $option = pg_escape_string($_POST['option']);
 
         $query = "INSERT INTO users(firstname, lastname, email, company, option) VALUES('" . $firstname . "', '" . $lastname . "', '" . $email . "', '" . $company . "', '" . $option . "')"; 
         $result = pg_query($query); 
