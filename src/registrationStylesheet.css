@@ -9,6 +9,9 @@ body {
 form {
 	text-align: center;
 }
+input { 
+	padding-bottom: 1em;
+}
 ::-webkit-input-placeholder {
    text-align: center;
 }
@@ -23,4 +26,7 @@ form {
 
 :-ms-input-placeholder {  
    text-align: center; 
+}
+button {
+
 }
