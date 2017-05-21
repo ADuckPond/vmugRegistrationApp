@@ -1,16 +1,19 @@
 <!DOCYTYPE html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/registrationStylesheet.css">
+
 <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/registrationStylesheet.css">
 </head>
 <html>
 	<body>
-		<div id="registerForm">
-			Register
+		<div class="card text-center" id="registerForm">
+			<h3 class="card-header" id="cardHead"> Register </h3>
 			<form action="/php/db.php" method="post"> 
-				<div id="fields">
+				<div class="card-block" id="fields">
 					<input type="text" name="firstname" placeholder="First Name"> <br></br>
 					
 					<input type = "text" name="lastname" placeholder="Last Name"> <br></br>
@@ -23,10 +26,27 @@
 					<input type="radio" name="option" value="VMWare Partner"> VMWare Partner  
 					<input type="radio" name="option" value="Other Vendor"> Other Vendor
 					<br> -->
-					
-					<button id="registerButton" type="Submit" name="Submit" value="Submit">Register</button>
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownSelection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    	Company Type <span class="glyphicon glyphicon-chevron-down" id="icon" aria-hidden="false"></span>
+					  	</button>
+					  	
+					  		<ul class="dropdown-menu">
+						      <li><a href="#" name="option" value="Customer" >Customer</a></li>
+						      <li><a href='#' name="option" value="VMWare Partner" >VMWare Partner</a></li>
+						      <li><a href='#' name="option" value="Other Vendor" >Other Vendor</a></li>
+						    </ul>
+					  	
+					</div>
+					<button class="button" id="registerButton" type="Submit" name="Submit" value="Submit">Submit</button>
 				</div>
 			</form>
 		</div>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    	<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>

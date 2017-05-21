@@ -1,11 +1,11 @@
 <html>
     <body>
         <?php
-        $dbHost = '172.18.0.100';
+        $dbHost = getenv('DB_HOST');
         $dbUser = getenv('DB_USER');
         $dbPwd = getenv('DB_PWD');
         $dbName = getenv('DB_NAME');
-        $conn_str = "host=172.18.0.100 dbname=vmug user=postgres password=postgres";
+        $conn_str = "host=$dbHost dbname=dbName user=$dbUser password=dbPwd";
         $db = pg_connect($conn_str);
 
         $firstname = pg_escape_string($_POST['firstname']);
@@ -21,7 +21,7 @@
             echo "Error with query: " . $errormessage;
             exit();
         }
-        printf ("These values were inserted into the database - %s %s %s %s %s", $firstname, $lastname, $emailaddress, $company, $option);
+        printf ("These values were inserted into the database - %s %s %s %s %s", $firstname, $lastname, $email, $company, $option);
         pg_close();
         ?>
     </body>
