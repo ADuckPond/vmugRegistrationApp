@@ -7,35 +7,24 @@ html{
 body{
 	margin:0;
 	height:100%;
-	font-family: 'Quattrocento Sans-Bold', sans-serif;
+	font-family: 'Quattrocento Sans', sans-serif;
 }
 button{
 	height:100%;
 	border:none;
 }
 p{
-	margin:0;
 	font-size:1.5em;
 	color:white;
 }
 h1{
-	margin:0;
 	font-size:3em;
 	color:white;
-}
-a:hover, a:visited, a:link, a:active{
-	text-decoration:none;
+	position:relative;
+	margin:0;
 }
 
 /* Classes */
-
-.indexButtons{
-	height:100%;
-	width:100%;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-}
 
 /* ID's */
 
@@ -48,39 +37,12 @@ a:hover, a:visited, a:link, a:active{
     background-color:#36D7B7;
     position:absolute;
     top:5%;
-	right:0;
+    right:0;
     bottom:0;
     left:0;
     border-left:solid 1em white;
     border-right:solid 1em white;
     border-bottom:solid 1em white;
-}
-#left{
-	background-color:#2ABB9B;
-	height:100%;
-	width:50%;
-	float:left;
-}
-#textWrapper{
-	text-align:center;
-}
-#right{
-	background-color:#36D7B7;
-	height:100%;
-	width:50%;
-	float:left;
-}
-#register:hover{
-	background-color:#049372;
-}
-#checkin:hover{
-	background-color:#049372;
-}
-#register:active{
-	background-color:#049372;
-}
-#checkin:active{
-	background-color:#049372;
 }
 #vmugPeople{
 	padding-left:1em;
@@ -94,7 +56,8 @@ a:hover, a:visited, a:link, a:active{
 }
 #admin{
 	background-color:white;
-	height:100%;
-	margin:0;
+	height:50%;
+	margin-top:1%;
 	float:right;
+	margin-right:1em;
 }
