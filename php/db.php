@@ -1,7 +1,7 @@
 <html> 
     <body> 
         <?php 
-        $db = pg_connect('host=localhost dbname=vmug user=Max password=postgres'); 
+        $db = pg_connect('host=localhost dbName=vmug user=Max pwd=postgres'); 
 
         $firstname = pg_escape_string($_POST['firstname']); 
         $lastname = pg_escape_string($_POST['lastname']); 

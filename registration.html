@@ -1,0 +1,32 @@
+<!DOCYTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/registrationStylesheet.css">
+<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+</head>
+<html>
+	<body>
+		<div id="registerForm">
+			Register
+			<form action="/php/db.php" method="post"> 
+				<div id="fields">
+					<input type="text" name="firstname" placeholder="First Name"> <br></br>
+					
+					<input type = "text" name="lastname" placeholder="Last Name"> <br></br>
+					
+					<input type="text" name="email" placeholder="Email"> <br></br>
+					
+					<input type="text" name="company" placeholder="Company"> 
+					
+					<!-- <input type="radio" name="option" value="Customer"> Customer 
+					<input type="radio" name="option" value="VMWare Partner"> VMWare Partner  
+					<input type="radio" name="option" value="Other Vendor"> Other Vendor
+					<br> -->
+					
+					<button id="registerButton" type="Submit" name="Submit" value="Submit">Register</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

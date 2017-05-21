@@ -1,32 +1,80 @@
-#registerForm {
-	text-align: center;
-	background-color: white;
-	width: 20%;
-}
+
 body {
 	background-color: #36D7B7;
+	font-family: 'Quattrocento Sans', sans-serif;
 }
 form {
 	text-align: center;
+
 }
 input { 
-	padding-bottom: 1em;
+	width: 30em;
+	height: 3em;
+	background-color: rgb(236, 240, 241);
+	border: none; 
+	
 }
+
 ::-webkit-input-placeholder {
-   text-align: center;
+	color: rgba(132, 132, 132, 0.65);
+    padding-left: 4px;
+    font-size: 1.5em;
 }
 
 :-moz-placeholder { /* Firefox 18- */
    text-align: center;  
+   opacity: 0.1%;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    text-align: center;  
+   opacity: 0.1%;
 }
 
 :-ms-input-placeholder {  
    text-align: center; 
+   opacity: 0.1%;
 }
-button {
+#registerForm {
+	text-align: center;
+	background-color: white;
+	display: block;
+	position: relative;
+	font-size: 1.5em;
+	width: 20%;
+}
+#registerButton {
+	font-size: .8em;
+	position: relative;
+	display: block;
+	width: 100%;
+	border-radius: 2px;
+	margin: 10px auto;
+	padding-left: 0;
+	overflow: hidden;
+	border-width: 0;
+	outline: none;
+  	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+	background-color: #22A7F0;
+	color: #ecf0f1;
+}
+#registerButton:span {
+	display: block;
+  	padding: 12px 24px;
+}
+#fields {
+	padding-left: 10px;
+	padding-right: 10px;
+}
 
-}
+
+  
+  
+  
+
+  
+
+  
+  
+  
+  
