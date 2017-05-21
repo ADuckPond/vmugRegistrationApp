@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title>VMUG Checkin</title>
-	<link rel="stylesheet" type="text/css" href="css/indexCss.css" />
-	<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>PageSkel HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/indexCss.css">
 </head>
 
 <body>
 	<div id="top">
-		<a href="index.html">
-			<img id="vmugPeople" src="images/vmugPeople.png" />
-		</a>
-		<a href="admin.html">
-			<button type="button" id="admin">
-				<p id="adminTxt">administration</p>
-			</button>
-		</a>
-	</div>
-	<div id="left">
-		<a href="registration.html">
-			<button type="button" id="register">
-				<h1 id="h1reg">Register here!</h1>
-				<p>Not registered yet?</p>
-			</button>
-		</a>
-	</div>
-	<div id="right">
-		<a href="checkin.html">
-			<button type="button" id="checkin">
-				<h1 id="h1chk">Check-in here!</h1>
-				<p>Pre-register online?</p>
-			</button>
-		</a>
-	</div>
+    	<a href="index.html">
+    		<img id="vmugPeople" src="images/vmugPeople.png" />
+    	</a>
+    	<a href="admin.html">
+    		<div id="admin">
+    			<p id="adminTxt">administration</p>
+    		</div>
+    	</a>
+    </div>
+    <div id="content">
+		<div id="left">
+			<a href="registration.html">
+				<div id="register" class="indexButtons">
+					<h1>Register here!</h1>
+				</div>
+			</a>
+		</div>
+		<div id="right">
+			<a href="checkin.html">
+				<div id="checkin" class="indexButtons">
+					<h1>Check-in here!</h1>
+				</div>
+			</a>
+		</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>	
 </body>
 </html>
