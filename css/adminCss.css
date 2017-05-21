@@ -21,9 +21,7 @@ h1{
 	font-size:3em;
 	color:white;
 	position:relative;
-	top:50%;
-	left:50%;
-	transform:translateX(-50%) translateY(-50%);
+	margin:0;
 }
 
 /* Classes */
@@ -32,6 +30,13 @@ h1{
 	font-family:'Quattrocento Sans-Bold', sans-serif;
 	text-align:center;
 	margin:0;
+	padding-top:.1em;
+	padding-bottom:.1em;
+}
+.tileText{
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
 
 /* ID's */
@@ -52,6 +57,51 @@ h1{
     border-right:solid 1em white;
     border-bottom:solid 1em white;
 }
+#buttonContainer{
+	height:94%;
+	width:100%;
+	background-color:yellow;
+}
+#upperButtons{
+	height:40%;
+	width:100%;
+}
+#lowerButtons{
+	height:40%;
+	width:100%;
+}
+#importButton{
+	height:100%;
+	width:50%;
+	background-color:#2ABB9B;
+	float:left;
+}
+#exportButton{
+	height:100%;
+	width:50%;
+	background-color:#36D7B7;
+	float:left;
+}
+#dbResetButton{
+	height:100%;
+	width:50%;
+	background-color:#36D7B7;
+	float:left;
+}
+#printLabelButton{
+	height:100%;
+	width:50%;
+	background-color:#2ABB9B;
+	float:left;
+}
+#bottomButton{
+	height:20%;
+	width:100%;
+	background-color:#049372;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
 #vmugPeople{
 	padding-left:1em;
 	height:100%;
@@ -71,5 +121,6 @@ h1{
 }
 #pageTitleDiv{
 	width:100%;
+	height:6%;
 	background-color:#049372;
 }
