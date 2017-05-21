@@ -1,0 +1,75 @@
+/* indexCss.css */
+
+/* DEFAULTS */
+html{
+	height:100%;
+}
+body{
+	margin:0;
+	height:100%;
+}
+button{
+	height:100%;
+	border:none;
+}
+p{
+	font-size:1.5em;
+	color:white;
+}
+h1{
+	font-size:3em;
+	color:white;
+	position:relative;
+	top:50%;
+	left:50%;
+	transform:translateX(-50%) translateY(-50%);
+}
+
+/* ID's */
+
+#top{
+	background-color:white;
+	height:5%;
+	width:100%;
+}
+#buttons{
+    background-color:#36D7B7;
+    position:absolute;
+    top:5%;
+    right:0;
+    bottom:0;
+    left:0;
+    border-left:solid 1em white;
+    border-right:solid 1em white;
+    border-bottom:solid 1em white;
+}
+#left{
+	background-color:#2ABB9B;
+	height:95%;
+	width:50%;
+	float:left;
+}
+#right{
+	background-color:#36D7B7;
+	height:95%;
+	width:50%;
+	float:left;
+}
+
+#vmugPeople{
+	padding-left:1em;
+	height:100%;
+}
+#adminTxt{
+	margin:0;
+	font-size:1em;
+	color:white;
+	font-style:bold;
+}
+#admin{
+	background-color:white;
+	height:50%;
+	margin-top:1%;
+	float:right;
+	margin-right:1em;
+}
