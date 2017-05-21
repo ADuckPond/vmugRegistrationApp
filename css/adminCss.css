@@ -28,7 +28,6 @@ h1{
 .pageTitle{
 	font-size:2.5em;
 	font-family:'Quattrocento Sans-Bold', sans-serif;
-	text-align:center;
 	margin:0;
 	padding-top:.1em;
 	padding-bottom:.1em;
@@ -58,7 +57,7 @@ h1{
     border-bottom:solid 1em white;
 }
 #buttonContainer{
-	height:94%;
+	height:92%;
 	width:100%;
 	background-color:yellow;
 }
@@ -121,6 +120,9 @@ h1{
 }
 #pageTitleDiv{
 	width:100%;
-	height:6%;
+	height:8%;
 	background-color:#049372;
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
