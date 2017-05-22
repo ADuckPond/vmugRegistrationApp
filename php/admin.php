@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <?php
 	include('session.php');
 ?>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
 	<title>VMUG Checkin</title>

@@ -16,7 +16,6 @@
         //Must only match 1 table row
 
         if($count == 1){
-            session_register("currentUser");
             $_SESSION['login_user'] = $currentUser;
 
             header("location: admin.php");

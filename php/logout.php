@@ -2,5 +2,5 @@
     session_start();
     session_unset();
     session_destroy();
-    header("localhost: ../adminLogin.html");
+    header("location: ../adminLogin.html");
 ?>
