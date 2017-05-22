@@ -23,7 +23,11 @@
         	</a>
         </div>
         <div id="content">
-        
+            <form action="/php/adminLogin.php" method="post">
+                <label>UserName  :</label><input type="text" name="currentUser" class="box"/><br/><br/>
+                <label>Password  :</label><input type="password" name="currentPwd" class="box"/><br/><br/>
+                <input type="submit" value="Login"/><br/>
+            </form>
         </div>
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     	<!-- Include all compiled plugins (below), or include individual files as needed -->

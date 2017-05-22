@@ -5,14 +5,14 @@
 <html lang="en-US">
 <head>
 	<title>VMUG Checkin</title>
-	<link rel="stylesheet" type="text/css" href="css/adminCss.css" />
+	<link rel="stylesheet" type="text/css" href="../css/adminCss.css" />
 	<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
 </head>
 
 <body>
 	<div id="top">
 		<a href="index.html">
-			<img id="vmugPeople" src="images/vmugPeople.png" />
+			<img id="vmugPeople" src="../images/vmugPeople.png" />
 		</a>
 		<a href="admin.html">
 			<button type="button" id="admin">

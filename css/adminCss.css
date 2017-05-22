@@ -74,10 +74,18 @@ h1{
 	height:92%;
 	width:15%;
 	float:left;
+	position:relative;
 	background-color:#049372;
 }
 #topNavButton{
 	border-top:solid .1em #2ABB9B;
+}
+#logoutButton{
+	width:100%;
+	border-top:solid .1em #2ABB9B;
+	margin-bottom:.5em;
+	position:absolute;
+	bottom:0;
 }
 #phpContent{
 	width:85%;
