@@ -23,11 +23,16 @@
         	</a>
         </div>
         <div id="content">
-            <form action="/php/adminLogin.php" method="post">
-                <label>UserName  :</label><input type="text" name="currentUser" class="box"/><br/><br/>
-                <label>Password  :</label><input type="password" name="currentPwd" class="box"/><br/><br/>
-                <input type="submit" value="Login"/><br/>
-            </form>
+            <div class="card text-center" id="credsForm">
+                <h3 class="card-header" id="formHeader"> Admin Login </h3>
+                <div class="card-block" id="fields">
+                    <form action="/php/adminLogin.php" method="post">
+                        <input type="text" name="currentUser" placeholder="UserName"/><br/><br/>
+                        <input type="password" name="currentPwd" placeholder="Password"/><br/><br/>
+                        <button id="loginButton" type="Submit" name="Submit" value="Submit">Login</button>
+                    </form>
+                </div>
+            </div>
         </div>
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     	<!-- Include all compiled plugins (below), or include individual files as needed -->
