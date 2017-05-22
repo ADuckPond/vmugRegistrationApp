@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title>VMUG Checkin</title>
+	<title>VMUG Reagistration</title>
 	<link rel="stylesheet" type="text/css" href="../css/adminCss.css" />
 	<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
 </head>
