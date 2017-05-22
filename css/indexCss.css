@@ -1,28 +1,6 @@
 /* indexCss.css */
 
 /* DEFAULTS */
-html{
-	height:100%;
-}
-body{
-	margin:0;
-	height:100%;
-	font-family: 'Quattrocento Sans-Bold', sans-serif;
-}
-button{
-	height:100%;
-	border:none;
-}
-p{
-	margin:0;
-	font-size:1.5em;
-	color:white;
-}
-h1{
-	margin:0;
-	font-size:3em;
-	color:white;
-}
 hr{
 	display:block;
 	border-width:.25em;
@@ -43,22 +21,6 @@ a:hover, a:visited, a:link, a:active{
 
 /* ID's */
 
-#top{
-	background-color:white;
-	height:5%;
-	width:100%;
-}
-#content{
-    background-color:#36D7B7;
-    position:absolute;
-    top:5%;
-	right:0;
-    bottom:0;
-    left:0;
-    border-left:solid 1em white;
-    border-right:solid 1em white;
-    border-bottom:solid 1em white;
-}
 #left{
 	background-color:#2ABB9B;
 	height:100%;
@@ -85,20 +47,4 @@ a:hover, a:visited, a:link, a:active{
 }
 #checkin:active{
 	background-color:#049372;
-}
-#vmugPeople{
-	padding-left:1em;
-	height:100%;
-}
-#adminTxt{
-	margin:0;
-	font-size:1em;
-	color:white;
-	font-style:bold;
-}
-#admin{
-	background-color:white;
-	height:100%;
-	margin:0;
-	float:right;
 }

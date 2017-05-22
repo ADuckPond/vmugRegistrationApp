@@ -4,9 +4,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title>VMUG Reagistration</title>
-	<link rel="stylesheet" type="text/css" href="../css/adminCss.css" />
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>VMUG Checkin</title>
+
 	<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/adminCss.css" />
+	<link rel="stylesheet" type="text/css" href="css/commonCss.css">
 </head>
 
 <body>
@@ -14,11 +21,9 @@
 		<a href="index.html">
 			<img id="vmugPeople" src="../images/vmugPeople.png" />
 		</a>
-		<a href="admin.html">
-			<button type="button" id="admin">
-				<p id="adminTxt">administration</p>
-			</button>
-		</a>
+		<a href="adminLogin.html">
+    		<img id="adminLogin" src="images/adminLogin.png" />
+    	</a>
 	</div>
 	<div id="content">
         <div id="pageTitleDiv">

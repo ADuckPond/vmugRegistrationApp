@@ -14,13 +14,13 @@ button{
 	border:none;
 }
 p{
+    margin:0;
 	font-size:1.5em;
 	color:white;
 }
 h1{
 	font-size:3em;
 	color:white;
-	position:relative;
 	margin:0;
 }
 
@@ -35,7 +35,6 @@ h1{
 	position:relative;
 }
 #content{
-    background-color:#36D7B7;
     position:absolute;
     top:5%;
     right:0;
