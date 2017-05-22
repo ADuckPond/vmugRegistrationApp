@@ -39,11 +39,11 @@ h1{
 	justify-content:center;
 }
 .navBar{
-	border-bottom:solid .1em #2ABB9B;
+	border-bottom:solid .1em #049372;
 	padding-top:.5em;
 	padding-bottom:.5em;
 	margin:0;
-	background-color:#049372;
+	background-color:#2ABB9B;
 	display:flex;
 	align-items:center;
 	justify-content:center;
@@ -75,14 +75,14 @@ h1{
 	width:15%;
 	float:left;
 	position:relative;
-	background-color:#049372;
+	background-color:#2ABB9B;
 }
 #topNavButton{
-	border-top:solid .1em #2ABB9B;
+	border-top:solid .1em #049372;
 }
 #logoutButton{
 	width:100%;
-	border-top:solid .1em #2ABB9B;
+	border-top:solid .1em #049372;
 	margin-bottom:.5em;
 	position:absolute;
 	bottom:0;
@@ -91,7 +91,7 @@ h1{
 	width:85%;
 	height:92%;
 	float:left;
-	background-color:lightgrey;
+	background-color:white;
 }
 #vmugPeople{
 	padding-left:1em;
@@ -113,7 +113,7 @@ h1{
 #pageTitleDiv{
 	width:100%;
 	height:8%;
-	background-color:#049372;
+	background-color:#2ABB9B;
 	display:flex;
 	align-items:center;
 	justify-content:center;
