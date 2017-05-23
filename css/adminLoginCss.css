@@ -26,10 +26,8 @@ input {
 	justify-content:center;
 }
 #credsForm{
-	width: 40rem;
 	background-color: #ADD5F1;
 	border-radius: 7px;
-	position:absolute;
 }
 #fields{
 	font-size: 2.5em;

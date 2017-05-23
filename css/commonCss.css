@@ -9,10 +9,6 @@ body{
 	height:100%;
 	font-family: 'Quattrocento Sans', sans-serif;
 }
-button{
-	height:100%;
-	border:none;
-}
 p{
     margin:0;
 	font-size:1.5em;
