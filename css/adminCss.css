@@ -11,10 +11,6 @@ input {
 	background-color: rgb(236, 240, 241);
 	border: none; 
 }
-label{
-	background-color:grey;
-	padding:.2em .5em .2em .5em;
-}
 
 /* Classes */
 .pageTitle{
@@ -64,6 +60,17 @@ label{
 .popup .show{
 	visibility:visible;
 }
+.inputFile{
+	width:.1px;
+	height:.1px;
+	opacity:0;
+	overflow:hidden;
+	position:absolute;
+	z-index:-1;
+}
+.inputFile + label{
+	cursor:pointer;
+}
 
 /* ID's */
 
@@ -71,7 +78,7 @@ label{
     background-color:white;
 }
 #buttonContainer{
-	height:92%;
+	height:100%;
 	width:15%;
 	float:left;
 	position:relative;
@@ -121,15 +128,6 @@ label{
 	height:92%;
 	float:left;
 	background-color:white;
-}
-#pageTitleDiv{
-	width:100%;
-	height:8%;
-	background-color:#2ABB9B;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	border-bottom:solid .1em #049372;
 }
 
 /* CUSTOM */

@@ -32,6 +32,7 @@ h1{
 	background-color:white;
 	height:5%;
 	width:100%;
+    border-bottom:solid .1em lightgrey;
 	position:relative;
 }
 #adminText{
