@@ -42,8 +42,11 @@
 					<div class="text-center" id="importForm">
 						<div class="card-block" id="fields">
 							<form action="/php/adminButtons.php" method="post">
-                    		    <input type="file" name="importFile" /><br/><br/>
-                    		    <button id="loginButton" type="Submit" name="Submit" value="Submit">Import</button>
+								<div id="fileBrowserLabel">
+									<label for="fileBrowser">CSV File</label>
+                    		    	<input type="file" name="importFile" id="fileBrowser" />
+								</div>
+                    		    <button id="importButton" type="Submit" name="Submit" value="Submit" class="btn-sm">Import</button>
                     		</form>
 						</div>
 					</div>

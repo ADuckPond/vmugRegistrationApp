@@ -10,8 +10,10 @@ form{
 input { 
 	background-color: rgb(236, 240, 241);
 	border: none; 
-	margin-top: 1em;
-	margin-bottom: -1.5em;
+}
+label{
+	background-color:grey;
+	padding:.2em .5em .2em .5em;
 }
 
 /* Classes */
@@ -91,9 +93,21 @@ input {
 	border-bottom:solid .1em #049372;
 }
 #fields{
-	font-size: .75em;
+	font-size: 1em;
 	margin-left: .5em;
 	margin-right: .5em;
+	padding:0;
+}
+#fileBrowserLabel{
+	text-overflow:hidden;
+	white-space:nowrap;
+	padding-top:.25em;
+}
+#fileBrowser{
+	color:black;
+}
+#importButton{
+	margin-bottom:.5em;
 }
 #logoutButton{
 	width:100%;
