@@ -1,8 +1,7 @@
 <?php
-    include("config.php");
-    session_start();
+    include('session.php');
 
-    if($_SERVER["REQUEST_METHOD"] == "POST") {
-        
+    if(isset[$_FILES] && $_FILES.count == 1){
+
     }
 ?>

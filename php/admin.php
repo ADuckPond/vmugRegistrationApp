@@ -33,30 +33,46 @@
     	</a>
 	</div>
 	<div id="content">
-        <div id="pageTitleDiv">
-        	<p class="pageTitle">Admin Page</p>
-		</div>
 		<div id="buttonContainer">
-			<div class="navBar popup" id="topNavButton" onclick="importPopupFunction()">
-				<p class="navText">Import</p>
-				<span class="card-header popupText" id="importPopup">
-					<form action="/php/adminButtons.php" method="post">
-                        <input type="'file'" name="importFile" placeholder="Click here to browse to the file..."/><br/><br/>
-                        <button id="loginButton" type="Submit" name="Submit" value="Submit">Import</button>
-                    </form>
+			<div class="navBar popup" id="topNavButton">
+				<div id="importTextContainer" onclick="importPopupFunction()">
+					<p class="navText">Import</p>
+				</div>
+				<span class="popupText" id="importPopup">
+					<div class="text-center" id="importForm">
+						<div class="card-block" id="fields">
+							<form action="php/adminButtons.php" enctype="multipart/form-data" method="post" >
+								<div id="fileBrowserLabel">
+									<input type="file" name="importFile" id="fileBrowser" class="inputFile" data-multiple-caption="{count} files selected" multiple />
+									<label for="fileBrowser" id="fileBrowserFormat">
+										<p>
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewbox="0 0 20 17">
+												<path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+											</svg>
+											<span>Choose a file...</span>
+										</p>
+									</label>
+									<button id="importButton" type="Submit" name="Submit" value="Submit"><p>Import</p></button>
+								</div>
+                    		</form>
+						</div>
+					</div>
 				</span>
 			</div>
-			<div class="navBar">
+			<div class="navBar navTextNoImport">
 				<p>Export</p>
 			</div>
-			<div class="navBar">
+			<div class="navBar navTextNoImport">
 				<p>Reset</p>
 			</div>
-			<div class="navBar">
+			<div class="navBar navTextNoImport">
+				<p>Theme</p>
+			</div>
+			<div class="navBar navTextNoImport">
 				<p>Test Print</p>
 			</div>
 			<a href="logout.php">
-				<div class="navBar" id="logoutButton">
+				<div class="navBar navTextNoImport" id="logoutButton">
 					<p>Logout</p>
 				</div>
 			</a>
@@ -71,6 +87,26 @@
 		var popup = document.getElementById("importPopup");
 		popup.classList.toggle("show");
 	}
+
+	var inputs=document.querySelectorAll('.inputFile');
+	Array.prototype.forEach.call(inputs,function(input){
+		var label = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener('change',function(e){
+			var filename = '';
+			if(this.files && this.files.length > 1)
+				fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+			else
+				fileName = e.target.value.split('\\').pop();
+
+			if(fileName)
+				label.querySelector('span').innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+	});
+	
 </script>
 
 </body>
