@@ -11,15 +11,15 @@
 	<title>VMUG Checkin</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/adminCss.css">
-	<link rel="stylesheet" type="text/css" href="css/commonCss.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/adminCss.css">
+	<link rel="stylesheet" type="text/css" href="../css/commonCss.css">
 </head>
 
 <body>
 	<div id="top">
 		<a href="index.html">
-			<img id="vmugPeople" src="images/vmugPeople.png" />
+			<img id="vmugPeople" src="../images/vmugPeople.png" />
 		</a>
 		<a href="adminLogin.html">
 			<div id="adminLoginButton">
@@ -27,7 +27,7 @@
 					<p id="adminText">ADMIN</p>
 				</div>
 				<div id="rightWrap">
-					<img id="adminLogin" src="images/adminLogin.png" />
+					<img id="adminLogin" src="../images/adminLogin.png" />
 				</div>
 			</div>
     	</a>
@@ -41,7 +41,7 @@
 				<span class="popupText" id="importPopup">
 					<div class="text-center" id="importForm">
 						<div class="card-block" id="fields">
-							<form action="php/adminButtons.php" enctype="multipart/form-data" method="post" >
+							<form action="../php/adminButtons.php" enctype="multipart/form-data" method="post" >
 								<div id="fileBrowserLabel">
 									<input type="file" name="importFile" id="fileBrowser" class="inputFile" data-multiple-caption="{count} files selected" multiple />
 									<label for="fileBrowser" id="fileBrowserFormat">
