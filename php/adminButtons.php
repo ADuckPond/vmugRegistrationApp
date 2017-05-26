@@ -1,46 +1,117 @@
 <?php
     include('session.php');
 
-    if($_SERVER["REQUEST_METHOD"] == "POST" && sizeof($_FILES) == 1){
+    // import function
+    if($_SERVER["REQUEST_METHOD"] == "POST" && sizeof($_FILES) == 1 && $_REQUEST['import']){
 
-        $file=$_FILES['importFile']['tmp_name'];
+        // establish relative file name / path
+        $fileName=$_FILES['importFile']['tmp_name'];
 
-        $targetDir = "uploads/";
-        $targetFile = $targetDir . basename($_FILES['importFile']['name']);
-        $fileType = pathinfo($targetFile,PATHINFO_EXTENSION);
+        // establish arrays for column selection
+        $names = array('Company','CompanyTitle');
+        $nameValue = array('Name');
 
-        $uploadOk = 1;
+        // initialize required vars
+        $picked = array();
+        $theData = array();
+        $isFirstRow = true;
 
-        if(file_exists($targetFile)){
-            $uploadOk = 0;
-        }
+        // attempt to open the file and loop through it
+        if(($handle = fopen($fileName, 'r')) !== FALSE){
+            while(($data = fgetcsv($handle, 1000, ',')) !== FALSE){
 
-        if($_FILES['importFile']['size'] > 500000){
-            $uploadOk = 0;
-        }
+                // establish the number of columns
+                $numCols = count($data);
 
-        if($fileType != "csv"){
-            $uploadOk = 0;
-        }
+                // initialize row array
+                $row = array();
 
-        if($uploadOk == 0){
+                // find values in first row and associate column numbers
+                if($isFirstRow){
+                    for($c=0; $c < $numCols; $c++)
+                        // check for name field
+                        if(in_array($data[$c], $nameValue))
+                            $pickedName[] = $c;
+                        // check for other fields
+                        elseif(in_array($data[$c], $names))
+                            $picked[] = $c;
+                    // set isFirstRow to false to move onto else block
+                    $isFirstRow = false;
+                }
 
-        }else{
-            if(move_uploaded_file($_FILES['importFile']['tmp_name'],$targetFile)){
-                echo 'The file '. basename($_FILES['importFile']['name']). ' has been uploaded.';
+                else{
+                    for($c=0; $c < $numCols; $c++)
+                        // check for the column number to match the column number for name then split the name field into first and last
+                        if(in_array($c, $pickedName)){
+                            $firstLast = explode(" ", $data[$c]);
+                            $row[] = $firstLast[0];
+                            $row[] = $firstLast[1];
+                        }elseif(in_array($c, $picked)){
+                            $row[] = $data[$c];
+                        }
+                    $theData[] = $row;
+                }
+
             }
         }
+        // close the file
+        fclose($handle);
 
-        $queryTableExists = "SELECT 1 FROM pg_tables WHERE schemaname = 'public' AND tablename = 'temp'";
-        $resultTableExists = pg_query($db,$queryTableExists);
-        if($count == 1){
+        // loop through the output array from the file
+        foreach($theData as $dataArray){
+            $arrayLen = count($dataArray);
+            // for each item in a row of data establish the different parts and set them to appropriate vars
+            for( $c=0; $c < $arrayLen; $c++){
+                switch ($c){
+                    case 0:
+                        $first = $dataArray[$c]; 
+                    case 1:
+                        $last = $dataArray[$c];
+                    case 2:
+                        $company = $dataArray[$c];
+                    case 3:
+                        $title = $dataArray[$c];
+                }
+            }
             
-        }{
-            $queryCreate = "CREATE TABLE temp (attend text, name text, company text)";
-            $resultCreate = pg_query($db,$queryCreate);
+            // import values from vars into db
+            $queryInsert = "INSERT INTO members (firstname,lastname,company,title,prereg,timestamp) VALUES ('$first','$last','$company','$title','t','now')";
+            $resultInsert = pg_query($db,$queryInsert);
 
-            $queryCopy = "COPY temp (attend, name, company) FROM '/var/www/html/php/$targetFile' DELIMITER ',' CSV HEADER";
-            $resultCopy = pg_query($db,$queryCopy);
+            // return to admin page
+            header("location: admin.php");
+            exit();
         }
+        
+    }
+
+    // export function
+    if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['export'] == 'export'){
+
+    }
+
+    // reset function
+    if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['reset'] == 'reset'){
+        // reset the db
+        $queryTruncate = "TRUNCATE members";
+        $resultTruncate = pg_query($db, $queryTruncate);
+
+        // reset the id sequence so that future values will start at 1
+        $queryResetSeq = "ALTER SEQUENCE members_id_seq RESTART";
+        $resultResetSeq = pg_query($db, $queryResetSeq);
+
+        // return to admin page
+        header("location: admin.php");
+        exit();
+    }
+
+    // theme function
+    if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['theme'] == 'theme'){
+
+    }
+
+    // testPrint function
+    if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['testPrint'] == 'testPrint'){
+
     }
 ?>

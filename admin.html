@@ -18,6 +18,9 @@
 		<a href="index.html">
 			<img id="vmugPeople" src="images/vmugPeople.png" />
 		</a>
+		<span class="popupAlert">
+			<h4>TEST</h4>
+		</span>
 		<a href="adminLogin.html">
 			<div id="adminLoginButton">
 				<div id="leftWrap">
@@ -49,7 +52,7 @@
 											<span>Choose a file...</span>
 										</p>
 									</label>
-									<button id="importButton" type="Submit" name="Submit" value="Submit"><p>Import</p></button>
+									<button id="importButton" type="Submit" name="Submit" value="import"><p>Import</p></button>
 								</div>
                     		</form>
 						</div>
@@ -57,16 +60,24 @@
 				</span>
 			</div>
 			<div class="navBar navTextNoImport">
-				<p>Export</p>
+				<form class="navForms" action="/php/adminButtons.php" method="post">
+					<button id="exportButton" class="navButtons" type="Submit" name="Submit" value="export"><p>Export</p></button>
+				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<p>Reset</p>
+				<form class="navForms" action="/php/adminButtons.php" method="post">
+					<button id="resetButton" class="navButtons" type="Submit" name="reset" value="reset"><p>Reset</p></button>
+				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<p>Theme</p>
+				<form class="navForms" action="/php/adminButtons.php" method="post">
+					<button id="exportButton" class="navButtons" type="Submit" name="theme" value="theme"><p>Theme</p></button>
+				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<p>Test Print</p>
+				<form class="navForms" action="/php/adminButtons.php" method="post">
+					<button id="exportButton" class="navButtons" type="Submit" name="testPrint" value="testPrint"><p>Printer Test</p></button>
+				</form>
 			</div>
 			<a href="logout.php">
 				<div class="navBar navTextNoImport" id="logoutButton">
@@ -83,6 +94,12 @@
 	function importPopupFunction(){
 		var popup = document.getElementById("importPopup");
 		popup.classList.toggle("show");
+	}
+
+	function alertPopup(){
+		var popup = document.getElementById("popupAlert");
+		popup.classList.toggle("show");
+		setTimeout(function(){popup.classList.toggle("show");},5000);
 	}
 
 	var inputs=document.querySelectorAll('.inputFile');

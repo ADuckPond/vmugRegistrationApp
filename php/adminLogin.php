@@ -19,6 +19,7 @@
             $_SESSION['login_user'] = $currentUser;
 
             header("location: admin.php");
+            exit();
         }else{
             $error = "Invalid login name or password";
         }

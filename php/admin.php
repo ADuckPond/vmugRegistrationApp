@@ -18,10 +18,11 @@
 
 <body>
 	<div id="top">
-		<a href="index.html">
+		<a href="../index.html">
 			<img id="vmugPeople" src="../images/vmugPeople.png" />
 		</a>
-		<a href="adminLogin.html">
+		
+		<a href="../adminLogin.html">
 			<div id="adminLoginButton">
 				<div id="leftWrap">
 					<p id="adminText">ADMIN</p>
@@ -41,7 +42,7 @@
 				<span class="popupText" id="importPopup">
 					<div class="text-center" id="importForm">
 						<div class="card-block" id="fields">
-							<form action="../php/adminButtons.php" enctype="multipart/form-data" method="post" >
+							<form id="importFormControl" enctype="multipart/form-data" method="post" >
 								<div id="fileBrowserLabel">
 									<input type="file" name="importFile" id="fileBrowser" class="inputFile" data-multiple-caption="{count} files selected" multiple />
 									<label for="fileBrowser" id="fileBrowserFormat">
@@ -52,7 +53,7 @@
 											<span>Choose a file...</span>
 										</p>
 									</label>
-									<button id="importButton" type="Submit" name="Submit" value="Submit"><p>Import</p></button>
+									<button id="importButton" type="Submit" name="import" value="import"><p>Import</p></button>
 								</div>
                     		</form>
 						</div>
@@ -60,16 +61,24 @@
 				</span>
 			</div>
 			<div class="navBar navTextNoImport">
-				<p>Export</p>
+				<form class="navForms" action="/php/adminButtons.php" method="post">
+					<button id="exportButton" class="navButtons" type="Submit" name="export" value="export"><p>Export</p></button>
+				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<p>Reset</p>
+				<form class="navForms" action="/php/adminButtons.php" method="post">
+					<button id="resetButton" class="navButtons" type="Submit" name="reset" value="reset"><p>Reset</p></button>
+				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<p>Theme</p>
+				<form class="navForms" action="/php/adminButtons.php" method="post">
+					<button id="exportButton" class="navButtons" type="Submit" name="theme" value="theme"><p>Theme</p></button>
+				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<p>Test Print</p>
+				<form class="navForms" action="/php/adminButtons.php" method="post">
+					<button id="exportButton" class="navButtons" type="Submit" name="testPrint" value="testPrint"><p>Printer Test</p></button>
+				</form>
 			</div>
 			<a href="logout.php">
 				<div class="navBar navTextNoImport" id="logoutButton">
@@ -87,6 +96,21 @@
 		var popup = document.getElementById("importPopup");
 		popup.classList.toggle("show");
 	}
+
+	$(function(){
+		$('#importFormControl').on('submit',function (e){
+			e.preventDefault();
+
+			$.ajax({
+				type:'post',
+				url:'adminButtons.php',
+				data:$('#importFormControl').serialize(),
+				success: function(){
+					alert('file uploaded');
+				}
+			});
+		});
+	});
 
 	var inputs=document.querySelectorAll('.inputFile');
 	Array.prototype.forEach.call(inputs,function(input){
