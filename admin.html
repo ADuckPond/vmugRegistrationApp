@@ -38,7 +38,7 @@
 	<div id="content">
 		<div id="buttonContainer">
 			<div class="navBar popup" id="topNavButton">
-				<div id="importTextContainer">
+				<div id="importTextContainer" onclick="popup()">
 					<p class="navText">Import</p>
 				</div>
 				<span class="popupText" id="importPopup">
@@ -63,22 +63,22 @@
 				</span>
 			</div>
 			<div class="navBar navTextNoImport">
-				<form class="navForms" action="/php/adminButtons.php" method="post">
+				<form class="navForms" method="post">
 					<button id="exportButton" class="navButtons" type="Submit" name="Submit" value="export"><p>Export</p></button>
 				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<form class="navForms" action="/php/adminButtons.php" method="post">
+				<form class="navForms" method="post">
 					<button id="resetButton" class="navButtons" type="Submit" name="reset" value="reset"><p>Reset</p></button>
 				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<form class="navForms" action="/php/adminButtons.php" method="post">
+				<form class="navForms" method="post">
 					<button id="exportButton" class="navButtons" type="Submit" name="theme" value="theme"><p>Theme</p></button>
 				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<form class="navForms" action="/php/adminButtons.php" method="post">
+				<form class="navForms" method="post">
 					<button id="exportButton" class="navButtons" type="Submit" name="testPrint" value="testPrint"><p>Printer Test</p></button>
 				</form>
 			</div>
@@ -94,6 +94,11 @@
     </div>
 
 <script type="text/javascript">
+	function popup(){
+		var popup = document.getElementById('importPopup');
+		popup.classList.toggle('show');
+	}
+
 	var inputs=document.querySelectorAll('.inputFile');
 	Array.prototype.forEach.call(inputs,function(input){
 		var label = input.nextElementSibling,

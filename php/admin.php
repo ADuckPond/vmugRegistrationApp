@@ -11,29 +11,29 @@
 	<title>VMUG Checkin</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/adminCss.css">
-	<link rel="stylesheet" type="text/css" href="css/commonCss.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/adminCss.css">
+	<link rel="stylesheet" type="text/css" href="../css/commonCss.css">
 
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/admin.js"></script>
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/admin.js"></script>
 </head>
 
 <body>
 	<div id="top">
-		<a href="index.html">
-			<img id="vmugPeople" src="images/vmugPeople.png" />
+		<a href="../index.html">
+			<img id="vmugPeople" src="../images/vmugPeople.png" />
 		</a>
 		<span class="popupAlert">
 			<h4>TEST</h4>
 		</span>
-		<a href="adminLogin.html">
+		<a href="../adminLogin.html">
 			<div id="adminLoginButton">
 				<div id="leftWrap">
 					<p id="adminText">ADMIN</p>
 				</div>
 				<div id="rightWrap">
-					<img id="adminLogin" src="images/adminLogin.png" />
+					<img id="adminLogin" src="../images/adminLogin.png" />
 				</div>
 			</div>
     	</a>
@@ -41,7 +41,7 @@
 	<div id="content">
 		<div id="buttonContainer">
 			<div class="navBar popup" id="topNavButton">
-				<div id="importTextContainer">
+				<div id="importTextContainer" onclick="popup()">
 					<p class="navText">Import</p>
 				</div>
 				<span class="popupText" id="importPopup">
@@ -66,22 +66,22 @@
 				</span>
 			</div>
 			<div class="navBar navTextNoImport">
-				<form class="navForms" action="/php/adminButtons.php" method="post">
+				<form class="navForms" method="post">
 					<button id="exportButton" class="navButtons" type="Submit" name="Submit" value="export"><p>Export</p></button>
 				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<form class="navForms" action="/php/adminButtons.php" method="post">
+				<form id="reset" class="navForms" method="post">
 					<button id="resetButton" class="navButtons" type="Submit" name="reset" value="reset"><p>Reset</p></button>
 				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<form class="navForms" action="/php/adminButtons.php" method="post">
+				<form class="navForms" method="post">
 					<button id="exportButton" class="navButtons" type="Submit" name="theme" value="theme"><p>Theme</p></button>
 				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<form class="navForms" action="/php/adminButtons.php" method="post">
+				<form class="navForms" method="post">
 					<button id="exportButton" class="navButtons" type="Submit" name="testPrint" value="testPrint"><p>Printer Test</p></button>
 				</form>
 			</div>
@@ -97,6 +97,7 @@
     </div>
 
 <script type="text/javascript">
+
 	var inputs=document.querySelectorAll('.inputFile');
 	Array.prototype.forEach.call(inputs,function(input){
 		var label = input.nextElementSibling,

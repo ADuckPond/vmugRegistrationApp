@@ -1,31 +1,28 @@
 <?php
     include('session.php');
 
-    // import function
-    if($_SERVER["REQUEST_METHOD"] == "POST" && sizeof($_FILES) == 1 && $_REQUEST['import']){
+    if(isset($_GET['action']) && $_SERVER["REQUEST_METHOD"] == "POST"){
+        $action=$_GET['action'];
+    }
 
+    // import function
+    if($action == 'import' && sizeof($_FILES) == 1){
         // establish relative file name / path
         $fileName=$_FILES['importFile']['tmp_name'];
-
         // establish arrays for column selection
         $names = array('Company','CompanyTitle');
         $nameValue = array('Name');
-
         // initialize required vars
         $picked = array();
         $theData = array();
         $isFirstRow = true;
-
         // attempt to open the file and loop through it
         if(($handle = fopen($fileName, 'r')) !== FALSE){
             while(($data = fgetcsv($handle, 1000, ',')) !== FALSE){
-
                 // establish the number of columns
                 $numCols = count($data);
-
                 // initialize row array
                 $row = array();
-
                 // find values in first row and associate column numbers
                 if($isFirstRow){
                     for($c=0; $c < $numCols; $c++)
@@ -38,7 +35,6 @@
                     // set isFirstRow to false to move onto else block
                     $isFirstRow = false;
                 }
-
                 else{
                     for($c=0; $c < $numCols; $c++)
                         // check for the column number to match the column number for name then split the name field into first and last
@@ -51,12 +47,10 @@
                         }
                     $theData[] = $row;
                 }
-
             }
         }
         // close the file
         fclose($handle);
-
         // loop through the output array from the file
         foreach($theData as $dataArray){
             $arrayLen = count($dataArray);
@@ -73,25 +67,20 @@
                         $title = $dataArray[$c];
                 }
             }
-            
             // import values from vars into db
             $queryInsert = "INSERT INTO members (firstname,lastname,company,title,prereg,timestamp) VALUES ('$first','$last','$company','$title','t','now')";
             $resultInsert = pg_query($db,$queryInsert);
-
-            // return to admin page
-            header("location: admin.php");
-            exit();
         }
-        
     }
 
     // export function
-    if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['export'] == 'export'){
+    if($action == 'export'){
 
     }
 
     // reset function
-    if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['reset'] == 'reset'){
+    if($action == 'reset'){
+
         // reset the db
         $queryTruncate = "TRUNCATE members";
         $resultTruncate = pg_query($db, $queryTruncate);
@@ -100,18 +89,16 @@
         $queryResetSeq = "ALTER SEQUENCE members_id_seq RESTART";
         $resultResetSeq = pg_query($db, $queryResetSeq);
 
-        // return to admin page
-        header("location: admin.php");
-        exit();
     }
 
     // theme function
-    if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['theme'] == 'theme'){
+    if($action == 'theme'){
 
     }
 
     // testPrint function
-    if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['testPrint'] == 'testPrint'){
+    if($action == 'testPrint'){
 
     }
+
 ?>
