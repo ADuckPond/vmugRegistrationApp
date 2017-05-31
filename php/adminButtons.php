@@ -68,7 +68,7 @@
                 }
             }
             // import values from vars into db
-            $queryInsert = "INSERT INTO members (firstname,lastname,company,title,prereg,timestamp) VALUES ('$first','$last','$company','$title','t','now')";
+            $queryInsert = "INSERT INTO members (firstname,lastname,company,title,prereg,timestamp) VALUES ('$first','$last','$company','$title','t')";
             $resultInsert = pg_query($db,$queryInsert);
         }
     }

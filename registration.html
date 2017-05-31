@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css/commonCss.css">
 
 	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/registrationCss.js"></script>
+	<script src="js/registration.js"></script>
 </head>
 
 <body>
@@ -34,11 +34,14 @@
 	</div>
 	<div id="content">
 		<div class="card text-center" id="credsForm">
-                <h3 class="card-header" id="formHeader"> VMUG Check-in </h3>
+                <h3 class="card-header" id="formHeader"> VMUG Walk-on Registration </h3>
                 <div class="card-block" id="fields">
-                    <form autocomplete="off" id="checkinForm" method="post">
-                        <input type="text" name="name" placeholder="Name"/><br/>
+                    <form autocomplete="off" id="registerForm" method="post">
+                        <input type="text" name="firstName" placeholder="First Name"/><br/>
+                        <input type="text" name="lastName" placeholder="Last Name"/><br/>
                         <input type="email" name="email" placeholder="E-mail"/><br/>
+                        <input type="text" name="company" placeholder="Company"/><br/>
+                        <input type="text" name="title" placeholder="Title"/><br/>
                         <p id="drawingRadio">Exclude from Drawings?</p><hr/>
                         <section class="section">
                             <div class="radioButtons">

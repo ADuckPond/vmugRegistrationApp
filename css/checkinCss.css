@@ -9,10 +9,9 @@ form{
 }
 input { 
 	background-color: rgb(236, 240, 241);
-	border: none; 
+	border: none;
 	width: 100%;
-	margin-top: 1em;
-	margin-bottom: -1.5em;
+	margin-bottom: .2rem;
 }
 hr{
 	display:block;
@@ -56,7 +55,7 @@ input[type="radio"]:checked + label span.radio::after{
 }
 .radioLabel{
     color:grey;
-    font-size:1.5rem;
+    font-size:1.25rem;
 }
 
 /* ID's */
@@ -72,21 +71,23 @@ input[type="radio"]:checked + label span.radio::after{
 	border-radius: 7px;
 }
 #fields{
-	font-size: 2.5em;
+	font-size: 1.5rem;
 	margin-left: .5em;
 	margin-right: .5em;
+    padding:.2rem;
+    padding-top:.5rem;
 }
 #formHeader{
-	padding-top: .5em;
+	padding-top: .2em;
 	padding-bottom: .2em;
-	font-size: 2.5em;
+	font-size: 2rem;
 	margin: 0;
 	color: #ecf0f1;
 	background-color: #59ABE3;
 }
 #drawingRadio{
     color:grey;
-    font-size:2rem;
+    font-size:1.5rem;
     margin-top:.5rem;
 }
 #yesLabel{
