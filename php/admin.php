@@ -14,6 +14,7 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/adminCss.css">
 	<link rel="stylesheet" type="text/css" href="../css/commonCss.css">
+	<link rel="stylesheet" type="text/css" href="../css/colorConfig.css">
 
 	<script src="../js/jquery-3.2.1.min.js"></script>
 	<script src="../js/admin.js"></script>

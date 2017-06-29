@@ -1,4 +1,4 @@
-/* indexCss.css */
+/* adminCss.css */
 
 /* DEFAULTS */
 h1{
@@ -8,7 +8,6 @@ form{
 	text-align:center;
 }
 input { 
-	background-color: rgb(236, 240, 241);
 	border: none; 
 }
 button{
@@ -30,9 +29,8 @@ label svg{
 	justify-content:center;
 }
 .navBar{
-	border-bottom:solid .1rem #049372;
+	border-bottom:solid .1rem;
 	margin:0;
-	background-color:#2ABB9B;
 	display:flex;
 	align-items:center;
 	justify-content:center;
@@ -40,8 +38,7 @@ label svg{
 	position:relative;
 }
 .navBar:active, .navBar:hover{
-	background-color:#36D7B7;
-	border-style:solid .1rem #2ABB9B;
+	border-style:solid .1rem;
 }
 .navText{
 	position:relative;
@@ -59,12 +56,10 @@ label svg{
 	width:100%;
 }
 .popupAlert{
-	
 	text-align:center;
 	position:relative;
 	z-index:1;
 	top:0;
-	background-color:#ABEBC6;
 }
 .popup .popupText{
 	visibility:hidden;
@@ -97,15 +92,11 @@ label svg{
 	align-items:center;
 	justify-content:center;
 }
-#content{
-    background-color:white;
-}
 #buttonContainer{
 	height:100%;
 	width:15%;
 	float:left;
 	position:relative;
-	background-color:#2ABB9B;
 }
 #importTextContainer{
 	height:100%;
@@ -117,10 +108,9 @@ label svg{
 	padding-bottom:.5rem;
 }
 #importForm{
-	background-color: #36D7B7;
 	position:absolute;
-	border-right:solid .1rem #049372;
-	border-bottom:solid .1rem #049372;
+	border-right:solid .1rem;
+	border-bottom:solid .1rem;
 }
 #fileBrowserLabel{
 	text-overflow:hidden;
@@ -129,13 +119,11 @@ label svg{
 	margin-top:.5rem;
 }
 #fileBrowserFormat{
-	background-color:#2471A3;
 	padding:.5rem 1rem;
 }
 #importButton{
-	background-color:#8E44AD;
 	padding:.5rem 1rem;
-	font-family:'Quattrocento Sans', sans-serif;;
+	font-family:'Quattrocento Sans', sans-serif;
 }
 #fields{
 	font-size: 1rem;
@@ -145,22 +133,20 @@ label svg{
 }
 #logoutButton{
 	width:100%;
-	border-top:solid .1rem #049372;
 	margin-bottom:.5rem;
 	position:absolute;
 	bottom:0;
+	border-top:solid .1rem;
 }
 #phpContent{
 	width:85%;
 	height:100%;
 	float:left;
-	background-color:white;
 	position:relative;
 }
 
 /* CUSTOM */
 ::-webkit-input-placeholder {
-	color: rgba(132, 132, 132, 0.65);
     padding-left: 4px;
     font-size: .7rem;
 }

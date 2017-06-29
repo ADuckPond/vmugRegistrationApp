@@ -1,4 +1,4 @@
-/* indexCss.css */
+/* commonCss.css */
 
 /* DEFAULTS */
 html{
@@ -13,11 +13,9 @@ body{
 p{
     margin:0;
 	font-size:1rem;
-	color:white;
 }
 h1{
 	font-size:2rem;
-	color:white;
 	margin:0;
 }
 
@@ -28,11 +26,10 @@ h1{
 #top{
 	height:5%;
 	width:100%;
-    border-bottom:solid .1rem lightgrey;
 	position:relative;
+    border-bottom:solid .1rem;
 }
 #adminText{
-    color:black;
     font-size:1rem;
     font-weight:bold;
 }
@@ -42,9 +39,9 @@ h1{
     right:0;
     bottom:0;
     left:0;
-    border-left:solid 1rem white;
-    border-right:solid 1rem white;
-    border-bottom:solid 1rem white;
+    border-left:solid 1rem;
+    border-right:solid 1rem;
+    border-bottom:solid 1rem;
 }
 #vmugPeople{
 	position:absolute;

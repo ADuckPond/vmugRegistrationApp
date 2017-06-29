@@ -1,0 +1,95 @@
+/* colorConfig.css */
+
+/* Default OBJs */
+p{
+    color:white;
+}
+h1{
+    color:white;
+}
+
+/* adminCss Colors */
+input { 
+	background-color: rgb(236, 240, 241);
+}
+
+/* Classes */
+
+/*adminCss Colors*/
+.navBar{
+	border-bottom:#049372;
+	background-color:#2ABB9B;
+}
+.navBar:active, .navBar:hover{
+	background-color:#36D7B7;
+	border-style:#2ABB9B;
+}
+.popupAlert{
+	background-color:#ABEBC6;
+}
+
+/* ID's */
+
+/* commonCss Colors */
+#top{
+    border-color:lightgrey;
+}
+#adminText{
+    color:black;
+}
+#content{
+    border-color:white;
+}
+
+/* indexCss Colors */
+#left{
+	background-color:#2ABB9B;
+}
+#right{
+	background-color:#36D7B7;
+}
+#register:hover{
+	background-color:#049372;
+}
+#checkin:hover{
+	background-color:#049372;
+}
+#register:active{
+	background-color:#049372;
+}
+#checkin:active{
+	background-color:#049372;
+}
+
+/* adminCss Colors */
+#buttonContainer{
+	background-color:#2ABB9B;
+}
+#importForm{
+	background-color: #36D7B7;
+    border-color:#049372;
+}
+#fileBrowserFormat{
+	background-color:#2471A3;
+}
+#importButton{
+	background-color:#8E44AD;
+}
+#logoutButton{
+    border-color:#049372;
+}
+#phpContent{
+	background-color:white;
+}
+
+/* CUSTOM */
+
+/* adminCss Colors */
+::-webkit-input-placeholder {
+	color: rgba(132, 132, 132, 0.65);
+}
+
+/* commonCss.css */
+
+/* ID's */
+

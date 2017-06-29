@@ -22,7 +22,6 @@ a:hover, a:visited, a:link, a:active{
 /* ID's */
 
 #left{
-	background-color:#2ABB9B;
 	height:100%;
 	width:50%;
 	float:left;
@@ -31,20 +30,7 @@ a:hover, a:visited, a:link, a:active{
 	text-align:center;
 }
 #right{
-	background-color:#36D7B7;
 	height:100%;
 	width:50%;
 	float:left;
-}
-#register:hover{
-	background-color:#049372;
-}
-#checkin:hover{
-	background-color:#049372;
-}
-#register:active{
-	background-color:#049372;
-}
-#checkin:active{
-	background-color:#049372;
 }
