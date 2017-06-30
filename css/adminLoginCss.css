@@ -8,7 +8,6 @@ form{
 	text-align:center;
 }
 input { 
-	background-color: rgb(236, 240, 241);
 	border: none; 
 	width: 100%;
 	margin-top: 1em;
@@ -20,13 +19,11 @@ input {
 /* ID's */
 
 #content{
-    background-color:white;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 }
 #credsForm{
-	background-color: #ADD5F1;
 	border-radius: 7px;
 }
 #fields{
@@ -39,8 +36,6 @@ input {
 	padding-bottom: .2em;
 	font-size: 2.5em;
 	margin: 0;
-	color: #ecf0f1;
-	background-color: #59ABE3;
 }
 #loginButton {
 	width:100%;
@@ -53,15 +48,11 @@ input {
 	overflow: hidden;
 	border-width: 0;
 	outline: none;
-  	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-	background-color: #59ABE3;
-	color: #ecf0f1;
 	cursor:pointer;
 }
 
 /* CUSTOM */
 ::-webkit-input-placeholder {
-	color: rgba(132, 132, 132, 0.65);
     padding-left: 4px;
     font-size: .7em;
 }

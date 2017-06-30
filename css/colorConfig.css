@@ -28,6 +28,20 @@ input {
 	background-color:#ABEBC6;
 }
 
+/* checkinCss Colors */
+.radioButtons span.radio::before {
+    background-color:#2ABB9B;
+}
+.radioButtons span.radio::after{
+    background-color:#36D7B7;
+}
+input[type="radio"]:checked + label span.radio::after{
+    background-color:#049372;
+}
+.radioLabel{
+    color:grey;
+}
+
 /* ID's */
 
 /* commonCss Colors */
@@ -82,14 +96,26 @@ input {
 	background-color:white;
 }
 
+/* checkinCss Colors */
+#credsForm{
+	background-color: #36D7B7;
+}
+#formHeader{
+	color: white;
+	background-color: #049372;
+}
+#drawingRadio{
+    color:grey;
+}
+#loginButton {
+  	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+	background-color: #049372;
+	color: white;
+}
+
 /* CUSTOM */
 
 /* adminCss Colors */
 ::-webkit-input-placeholder {
 	color: rgba(132, 132, 132, 0.65);
 }
-
-/* commonCss.css */
-
-/* ID's */
-
