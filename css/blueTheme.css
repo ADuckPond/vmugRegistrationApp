@@ -1,31 +1,27 @@
 /* colorConfig.css */
 
 /* Default OBJs */
-p{
-    color:white;
-}
-h1{
+p, h1{
     color:white;
 }
 
 /* adminCss Colors */
 input { 
-	background-color: rgb(236, 240, 241);
+	background-color: white;
 }
 
 /* Classes */
 
 /*adminCss Colors*/
-.navBar{
+.navBar, .popupAlert{
 	background-color:#67B8DE;
+}
+.navBar{
 	border-color:#3399CC;
 }
 .navBar:active, .navBar:hover{
 	background-color:#91C9E8;
-	border-style:#67B8DE;
-}
-.popupAlert{
-	background-color:#67B8DE;
+	border-color:#67B8DE;
 }
 
 /* checkinCss Colors */
@@ -62,25 +58,15 @@ input[type="radio"]:checked + label span.radio::after{
 #right{
 	background-color:#91C9E8;
 }
-#register:hover{
-	background-color:#B4DCED;
-}
-#checkin:hover{
-	background-color:#B4DCED;
-}
-#register:active{
-	background-color:#B4DCED;
-}
-#checkin:active{
+#register:hover, #checkin:hover, #register:active, #checkin:active{
 	background-color:#B4DCED;
 }
 
 /* adminCss Colors */
-#buttonContainer{
+#buttonContainer, #importForm{
 	background-color:#67B8DE;
 }
 #importForm{
-	background-color: #67B8DE;
     border-color:#3399CC;
 }
 #fileBrowserFormat{

@@ -14,10 +14,9 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/adminCss.css">
 	<link rel="stylesheet" type="text/css" href="../css/commonCss.css">
-	<link rel="stylesheet" type="text/css" href="../css/colorConfig.css">
+	<link rel="stylesheet" type="text/css" href="../css/blueTheme.css" id="theme">
 
 	<script src="../js/jquery-3.2.1.min.js"></script>
-	<script src="../js/admin.js"></script>
 </head>
 
 <body>
@@ -42,7 +41,7 @@
 	<div id="content">
 		<div id="buttonContainer">
 			<div class="navBar popup" id="topNavButton">
-				<div id="importTextContainer" onclick="popup()">
+				<div id="importTextContainer">
 					<p class="navText">Import</p>
 				</div>
 				<span class="popupText" id="importPopup">
@@ -118,6 +117,8 @@
 		});
 	});
 </script>
+<script src="../js/theme.js"></script>
+<script src="../js/admin.js"></script>
 	
 </body>
 </html>
