@@ -17,26 +17,26 @@ input {
 
 /*adminCss Colors*/
 .navBar{
-	border-bottom:#049372;
-	background-color:#2ABB9B;
+	background-color:#67B8DE;
+	border-color:#3399CC;
 }
 .navBar:active, .navBar:hover{
-	background-color:#36D7B7;
-	border-style:#2ABB9B;
+	background-color:#91C9E8;
+	border-style:#67B8DE;
 }
 .popupAlert{
-	background-color:#ABEBC6;
+	background-color:#67B8DE;
 }
 
 /* checkinCss Colors */
 .radioButtons span.radio::before {
-    background-color:#2ABB9B;
+    background-color:#3399CC;
 }
 .radioButtons span.radio::after{
-    background-color:#36D7B7;
+    background-color:#B4DCED;
 }
 input[type="radio"]:checked + label span.radio::after{
-    background-color:#049372;
+    background-color:#3399CC;
 }
 .radioLabel{
     color:grey;
@@ -57,31 +57,31 @@ input[type="radio"]:checked + label span.radio::after{
 
 /* indexCss Colors */
 #left{
-	background-color:#2ABB9B;
+	background-color:#67B8DE;
 }
 #right{
-	background-color:#36D7B7;
+	background-color:#91C9E8;
 }
 #register:hover{
-	background-color:#049372;
+	background-color:#B4DCED;
 }
 #checkin:hover{
-	background-color:#049372;
+	background-color:#B4DCED;
 }
 #register:active{
-	background-color:#049372;
+	background-color:#B4DCED;
 }
 #checkin:active{
-	background-color:#049372;
+	background-color:#B4DCED;
 }
 
 /* adminCss Colors */
 #buttonContainer{
-	background-color:#2ABB9B;
+	background-color:#67B8DE;
 }
 #importForm{
-	background-color: #36D7B7;
-    border-color:#049372;
+	background-color: #67B8DE;
+    border-color:#3399CC;
 }
 #fileBrowserFormat{
 	background-color:#2471A3;
@@ -90,7 +90,7 @@ input[type="radio"]:checked + label span.radio::after{
 	background-color:#8E44AD;
 }
 #logoutButton{
-    border-color:#049372;
+    border-color:#3399CC;
 }
 #phpContent{
 	background-color:white;
@@ -98,18 +98,18 @@ input[type="radio"]:checked + label span.radio::after{
 
 /* checkinCss Colors */
 #credsForm{
-	background-color: #36D7B7;
+	background-color: #B4DCED;
 }
 #formHeader{
 	color: white;
-	background-color: #049372;
+	background-color: #3399CC;
 }
 #drawingRadio{
     color:grey;
 }
 #loginButton {
   	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-	background-color: #049372;
+	background-color: #3399CC;
 	color: white;
 }
 
