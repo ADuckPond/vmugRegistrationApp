@@ -8,7 +8,7 @@
     // getTheme function
     if($action == 'getTheme'){
         // get theme value from db
-        $queryGetTheme = "SELECT * FROM theme";
+        $queryGetTheme = "SELECT * FROM theme WHERE enabled = 't'";
         $resultGetTheme = pg_query($db,$queryGetTheme);
         $row = pg_fetch_array($resultGetTheme);
         echo $row["theme"];

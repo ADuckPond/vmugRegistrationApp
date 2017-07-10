@@ -19,6 +19,12 @@ $(document).ready(function(){
                 case "red":
                     css='css/redTheme.css';
                     break;
+                case "yellow":
+                    css='css/yellowTheme.css';
+                    break;
+                case "green":
+                    css='css/greenTheme.css';
+                    break;
                 default:
                     css='css/blueTheme.css';
             }

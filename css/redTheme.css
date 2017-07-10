@@ -14,10 +14,10 @@ input {
 
 /*adminCss Colors*/
 .navBar, .popupAlert{
-	background-color:#8E0201;67b8de
+	background-color:#8E0201;
 }
 .navBar{
-	border-color:#C10303;3399cc
+	border-color:#C10303;
 }
 .navBar:active, .navBar:hover{
 	background-color:#5B0000;

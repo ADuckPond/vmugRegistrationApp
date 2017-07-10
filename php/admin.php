@@ -96,6 +96,8 @@
 		</div>
     </div>
 
+<script src="../js/phpTheme.js"></script>
+<script src="../js/admin.js"></script>
 <script type="text/javascript">
 
 	var inputs=document.querySelectorAll('.inputFile');
@@ -117,8 +119,6 @@
 		});
 	});
 </script>
-<script src="../js/theme.js"></script>
-<script src="../js/admin.js"></script>
 	
 </body>
 </html>
