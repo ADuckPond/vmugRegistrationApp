@@ -1,0 +1,107 @@
+/* colorConfig.css */
+
+/* Default OBJs */
+p, h1{
+    color:white;
+}
+
+/* adminCss Colors */
+input { 
+	background-color: white;
+}
+
+/* Classes */
+
+/*adminCss Colors*/
+.navBar, .popupAlert{
+	background-color:#A97D0C;
+}
+.navBar{
+	border-color:#D6AC23;
+}
+.navBar:active, .navBar:hover{
+	background-color:#A97D0C;
+	border-color:#C3971C;
+}
+
+/* checkinCss Colors */
+.radioButtons span.radio::before {
+    background-color:#D6AC23;
+}
+.radioButtons span.radio::after{
+    background-color:#463C28;
+}
+input[type="radio"]:checked + label span.radio::after{
+    background-color:#D6AC23;
+}
+.radioLabel{
+    color:grey;
+}
+
+/* ID's */
+
+/* commonCss Colors */
+#top{
+    border-color:lightgrey;
+}
+#adminText{
+    color:black;
+}
+#content{
+    border-color:white;
+}
+
+/* indexCss Colors */
+#left{
+	background-color:#A97D0C;
+}
+#right{
+	background-color:#C3971C;
+}
+#register:hover, #checkin:hover, #register:active, #checkin:active{
+	background-color:#463C28;
+}
+
+/* adminCss Colors */
+#buttonContainer, #importForm{
+	background-color:#C3971C;
+}
+#importForm{
+    border-color:#D6AC23;
+}
+#fileBrowserFormat{
+	background-color:#2471A3;
+}
+#importButton{
+	background-color:#8E44AD;
+}
+#logoutButton{
+    border-color:#D6AC23;
+}
+#phpContent{
+	background-color:white;
+}
+
+/* checkinCss Colors */
+#credsForm{
+	background-color: #2E2E2E;
+}
+#formHeader{
+	color: white;
+	background-color: #D6AC23;
+}
+#drawingRadio{
+    color:grey;
+}
+#loginButton {
+  	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+	background-color: #D6AC23;
+	color: white;
+}
+
+/* CUSTOM */
+
+/* adminCss Colors */
+::-webkit-input-placeholder {
+	color: rgba(132, 132, 132, 0.65);
+}
