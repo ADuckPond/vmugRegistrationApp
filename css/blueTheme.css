@@ -2,7 +2,7 @@
 
 /* Default OBJs */
 p, h1{
-    color:white;
+    color:black;
 }
 
 /* adminCss Colors */
@@ -28,6 +28,9 @@ input {
 }
 .sideNav{
 	background-color:black;
+}
+.formDef{
+	background-color: #B4DCED;
 }
 
 /* checkinCss Colors */
@@ -73,10 +76,10 @@ input[type="radio"]:checked + label span.radio::after{
 	background-color:#67B8DE;
 }
 #fileBrowserFormat{
-	background-color:#357491;
+	background-color:#67B8DE;
 }
 #importButton{
-	background-color:#916126;
+	background-color:#3399CC;
 }
 #logoutButton{
     border-color:#3399CC;

@@ -26,6 +26,9 @@ input {
 .navForm{
 	border-color:#008D3F;
 }
+.sideNav{
+	background-color:black;
+}
 
 /* checkinCss Colors */
 .radioButtons span.radio::before {
@@ -70,10 +73,10 @@ input[type="radio"]:checked + label span.radio::after{
 	background-color:#30A062;
 }
 #fileBrowserFormat{
-	background-color:#2BABAD;
+	background-color:#41D985;
 }
 #importButton{
-	background-color:#293A3A;
+	background-color:#008D3F;
 }
 #logoutButton{
     border-color:#008D3F;

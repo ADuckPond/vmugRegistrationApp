@@ -21,19 +21,19 @@
 
 <body>
 	<div id="top">
-		<a href="index.html">
-			<img id="vmugPeople" src="images/vmugPeople.png" />
+		<a href="../index.html">
+			<img id="vmugPeople" src="../images/vmugPeople.png" />
 		</a>
 		<span class="popupAlert">
 			<h4>TEST</h4>
 		</span>
-		<a href="adminLogin.html">
+		<a href="../adminLogin.html">
 			<div id="adminLoginButton">
 				<div id="leftWrap">
 					<p id="adminText">ADMIN</p>
 				</div>
 				<div id="rightWrap">
-					<img id="adminLogin" src="images/adminLogin.png" />
+					<img id="adminLogin" src="../images/adminLogin.png" />
 				</div>
 			</div>
     	</a>
@@ -51,7 +51,7 @@
 				</form>
 			</div>
 			<div class="navBar navTextNoImport">
-				<form class="navForms" method="post">
+				<form id="reset" class="navForms" method="post">
 					<button id="resetButton" class="navButtons" type="Submit" name="reset" value="reset"><p>Reset</p></button>
 				</form>
 			</div>
@@ -96,6 +96,7 @@
 		</div>
 		<div class="sideNav" id="themeForm">
 			<a href="javascript:void(0)" id="themeClose" class="closeBtn">&times;</a>
+			
 		</div>
 		<div id="phpContent">
 			
