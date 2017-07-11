@@ -1,7 +1,19 @@
 $(document).ready(function(){
-	$("#importTextContainer").click(function(){
-		$('.popupText').toggleClass('show');
+	$("#popupImportButton").click(function(){
+        document.getElementById("importForm").style.width = "30%"
 	});
+
+    $("#popupThemeButton").click(function(){
+		document.getElementById("themeForm").style.width = "30%";
+	});
+
+    $("#importClose").click(function(){
+        document.getElementById("importForm").style.width = "0";
+    });
+
+    $("#themeClose").click(function(){
+        document.getElementById("themeForm").style.width = "0";
+    });
 
     $('#importFileForm').on('submit',function(e){
 

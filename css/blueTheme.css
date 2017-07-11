@@ -13,7 +13,7 @@ input {
 /* Classes */
 
 /*adminCss Colors*/
-.navBar, .popupAlert{
+.navBar, .popupAlert, .navForm{
 	background-color:#67B8DE;
 }
 .navBar{
@@ -22,6 +22,12 @@ input {
 .navBar:active, .navBar:hover{
 	background-color:#91C9E8;
 	border-color:#67B8DE;
+}
+.navForm{
+	border-color:#3399CC;
+}
+.sideNav{
+	background-color:black;
 }
 
 /* checkinCss Colors */
@@ -63,17 +69,14 @@ input[type="radio"]:checked + label span.radio::after{
 }
 
 /* adminCss Colors */
-#buttonContainer, #importForm{
+#buttonContainer{
 	background-color:#67B8DE;
 }
-#importForm{
-    border-color:#3399CC;
-}
 #fileBrowserFormat{
-	background-color:#2471A3;
+	background-color:#357491;
 }
 #importButton{
-	background-color:#8E44AD;
+	background-color:#916126;
 }
 #logoutButton{
     border-color:#3399CC;

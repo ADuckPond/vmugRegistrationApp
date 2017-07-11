@@ -13,15 +13,18 @@ input {
 /* Classes */
 
 /*adminCss Colors*/
-.navBar, .popupAlert{
-	background-color:#A97D0C;
+.navBar, .popupAlert, .navForm{
+	background-color:#C3971C;
 }
 .navBar{
 	border-color:#D6AC23;
 }
 .navBar:active, .navBar:hover{
 	background-color:#A97D0C;
-	border-color:#C3971C;
+	border-color:#D6AC23;
+}
+.navForm{
+	border-color:#D6AC23;
 }
 
 /* checkinCss Colors */
@@ -63,17 +66,14 @@ input[type="radio"]:checked + label span.radio::after{
 }
 
 /* adminCss Colors */
-#buttonContainer, #importForm{
+#buttonContainer{
 	background-color:#C3971C;
 }
-#importForm{
-    border-color:#D6AC23;
-}
 #fileBrowserFormat{
-	background-color:#2471A3;
+	background-color:#463C28;
 }
 #importButton{
-	background-color:#8E44AD;
+	background-color:#765A09;
 }
 #logoutButton{
     border-color:#D6AC23;
@@ -84,7 +84,7 @@ input[type="radio"]:checked + label span.radio::after{
 
 /* checkinCss Colors */
 #credsForm{
-	background-color: #2E2E2E;
+	background-color: #463C28;
 }
 #formHeader{
 	color: white;
