@@ -105,6 +105,7 @@ a:hover{
 	color:white;
 }
 .formDef{
+	border:.15rem solid rgba(255,255,255,.5);
 	margin:0 auto;
 	width:75%;
 }

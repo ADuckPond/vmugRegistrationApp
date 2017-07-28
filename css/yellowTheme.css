@@ -29,6 +29,9 @@ input {
 .sideNav{
 	background-color:black;
 }
+.formDef{
+	background-color:#463C28;
+}
 
 /* checkinCss Colors */
 .radioButtons span.radio::before {
