@@ -98,11 +98,36 @@
 		<div class="sideNav" id="themeForm">
 			<a href="javascript:void(0)" id="themeClose" class="closeBtn">&times;</a>
 			<div class="card text-center formDef" id="">
-			<h3 class="card-header" id="formHeader"> Upload a File </h3>
+			<h3 class="card-header" id="formHeader"> Select a Color Theme </h3>
 				<div class="card-block" id="">
 					<form id="themeSettings" method="post">
-						<p id="themeRadio">Select a color scheme:</p></hr>
-						
+						<section class="section">
+                            <div class="radioButtons">
+								<?php
+									$labelQuery = "SELECT * FROM theme";
+									$labelResult=pg_query($db,$labelQuery);
+
+									$label="";
+									$checkVal="";
+
+									while($row=pg_fetch_array($labelResult)){
+
+
+										if($row['enabled']){
+											$checkVal="checked";
+										}else{
+											$checkVal="";
+										}
+
+										$input = "<input type='radio' name='radio' id='" .$row['theme']. "' value='" .$row['theme']. "'" .$checkVal. ">";
+										$label = "<label id='" .$row['theme']. "Label' class='radioLabel' for='" .$row['theme']. "'><span class='radio'>" .ucfirst($row['theme']). "</span></label><br>"; 
+										
+										echo $input;
+										echo $label;
+									}
+								?>
+                            </div>
+                        </section>
 					</form>
 				</div>
 			</div>

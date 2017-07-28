@@ -109,6 +109,38 @@ a:hover{
 	margin:0 auto;
 	width:75%;
 }
+.section input[type="radio"]{
+    display:none;
+}
+.radioButtons span::before, .radioButtons span::after{
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+.radioButtons span.radio:hover{
+    cursor:pointer;
+}
+.radioButtons span.radio::before {
+    left:-27px;
+    width:25px;
+    height:25px;
+    border-radius:50px;
+}
+.radioButtons span.radio::after{
+    left:-23px;
+    width:17px;
+    height:17px;
+    border-radius:10px;
+    transition: background-color .25s;
+}
+.radioButtons label{
+    position:absolute;
+}
+.radioLabel{
+	font-size:1.25rem;
+}
 
 /* ID's */
 #top{
@@ -138,6 +170,10 @@ a:hover{
 }
 #importButton:hover{
 	cursor:pointer;
+}
+#themeRadio{
+    font-size:1.5rem;
+    margin-top:.5rem;
 }
 #fields{
 	font-size: 1rem;
