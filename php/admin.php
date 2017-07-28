@@ -73,7 +73,8 @@
 		</div>
 		<div class="sideNav" id="importForm">
 			<a href="javascript:void(0)" class="closeBtn" id="importClose">&times;</a>
-			<div class="text-center" id="formCont">
+			<div class="card text-center formDef" id="formCont">
+				<h3 class="card-header" id="formHeader"> Upload a File </h3>
 				<div class="card-block" id="fields">
 					<form id="importFileForm" enctype="multipart/form-data" method="post" >
 						<div id="fileBrowserLabel">
@@ -96,7 +97,15 @@
 		</div>
 		<div class="sideNav" id="themeForm">
 			<a href="javascript:void(0)" id="themeClose" class="closeBtn">&times;</a>
-			
+			<div class="card text-center formDef" id="">
+			<h3 class="card-header" id="formHeader"> Upload a File </h3>
+				<div class="card-block" id="">
+					<form id="themeSettings" method="post">
+						<p id="themeRadio">Select a color scheme:</p></hr>
+						
+					</form>
+				</div>
+			</div>
 		</div>
 		<div id="phpContent">
 			
