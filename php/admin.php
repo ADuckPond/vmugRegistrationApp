@@ -22,11 +22,19 @@
 <body>
 	<div id="top">
 		<a href="../index.html">
-			<img id="vmugPeople" src="../images/vmugPeople.png" />
+			<div id="homeButton">
+				<div id="homeImg">
+					<img id="homeLogo" src="../images/homeLogo.png" />
+				</div>
+				<div id="homeIcon">
+					<p id="homeColor">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewbox="0 0 20 17">
+							<path d="M 20 20 L 20 12 L 22 12 L 12 3 L 2 12 L 4 12 L 4 20 C 4 20.601563 4.398438 21 5 21 L 10 21 L 10 14 L 14 14 L 14 21 L 19 21 C 19.601563 21 20 20.601563 20 20 Z "></path>
+						</svg>
+					</p>
+				</div>
+			</div>
 		</a>
-		<span class="popupAlert">
-			<h4>TEST</h4>
-		</span>
 		<a href="../adminLogin.html">
 			<div id="adminLoginButton">
 				<div id="leftWrap">
@@ -98,25 +106,23 @@
 		<div class="sideNav" id="themeForm">
 			<a href="javascript:void(0)" id="themeClose" class="closeBtn">&times;</a>
 			<div class="card text-center formDef" id="">
-			<h3 class="card-header" id="formHeader"> Select a Color Theme </h3>
+			<h3 class="card-header" id="formHeader"> Modify Theme </h3>
 				<div class="card-block" id="">
-					<form id="themeSettings" method="post">
+					<form id="themeSettings" enctype="multipart/form-data" method="post">
+						<p>Select a color scheme:</p>
 						<section class="section">
                             <div class="radioButtons">
 								<?php
-									$labelQuery = "SELECT * FROM theme";
+									$labelQuery = "SELECT * FROM theme ORDER BY theme ASC";
 									$labelResult=pg_query($db,$labelQuery);
 
-									$label="";
-									$checkVal="";
-
 									while($row=pg_fetch_array($labelResult)){
+										
+										$label="";
+										$checkVal="";
 
-
-										if($row['enabled']){
+										if($row['enabled'] == 't'){
 											$checkVal="checked";
-										}else{
-											$checkVal="";
 										}
 
 										$input = "<input type='radio' name='radio' id='" .$row['theme']. "' value='" .$row['theme']. "'" .$checkVal. ">";
@@ -126,8 +132,37 @@
 										echo $label;
 									}
 								?>
-                            </div>
-                        </section>
+							</div>
+						</section>
+						<hr>
+						<p>Select a file to change the admin logo</p>
+						<div id="logoBrowserLabel">
+							<input type="file" name="logoFile" id="logoBrowser" class="inputFile" data-multiple-caption="{count} files selected" multiple />
+							<label for="logoBrowser" id="logoBrowserFormat">
+								<p>
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewbox="0 0 20 17">
+										<path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+									</svg>
+									<span>Choose a file...</span>
+								</p>
+							</label>
+						</div>
+						<hr>
+						<p>Select a file to change the home logo</p>
+						<div id="logoBrowserLabel">
+							<input type="file" name="homeFile" id="homeBrowser" class="inputFile" data-multiple-caption="{count} files selected" multiple />
+							<label for="homeBrowser" id="logoBrowserFormat">
+								<p>
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewbox="0 0 20 17">
+										<path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+									</svg>
+									<span>Choose a file...</span>
+								</p>
+							</label>
+						</div>
+						<div>
+							<button id="themeButton" type="Submit" name="setTheme" value="setTheme"><p>Set Theme</p></button>
+						</div>
 					</form>
 				</div>
 			</div>

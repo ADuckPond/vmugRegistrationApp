@@ -94,6 +94,17 @@
     // theme function
     if($action == 'theme'){
 
+        // get theme radio data
+        $theme=pg_escape_string($_POST['radio']);
+
+        // Set all theme color options to false before setting the correct one to true
+        $querySetAllFalse = "UPDATE theme SET enabled = 'f'";
+        $resultSetAllFalse = pg_query($db, $querySetAllFalse);
+
+        // Set appropriate theme color enabled value to true
+        $querySetColor = "UPDATE theme SET enabled = 't' WHERE theme = '$theme'";
+        $resultSetColor = pg_query($db, $querySetColor);
+        
     }
 
     // testPrint function

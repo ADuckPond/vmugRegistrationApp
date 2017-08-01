@@ -17,7 +17,6 @@ label svg{
 	width:1rem;
 	height:1rem;
 	vertical-align:middle;
-	fill:currentColor;
 	margin-top:-.25rem;
 	margin-right:.1rem;
 }
@@ -58,12 +57,6 @@ a:hover{
 .navForms{
 	height:100%;
 	width:100%;
-}
-.popupAlert{
-	text-align:center;
-	position:relative;
-	z-index:1;
-	top:0;
 }
 .inputFile{
 	width:.1px;
@@ -163,6 +156,15 @@ a:hover{
 #fileBrowserFormat{
 	padding:.5rem 1rem;
 }
+#logoBrowserLabel{
+	text-overflow:hidden;
+	white-space:nowrap;
+	padding-top:.25rem;
+	margin-top:.5rem;
+}
+#logoBrowserFormat{
+	padding:.5rem 1rem;
+}
 #importButton{
 	padding:.5rem 1rem;
 	margin-bottom:.5rem;
@@ -171,9 +173,18 @@ a:hover{
 #importButton:hover{
 	cursor:pointer;
 }
+#themeButton{
+	padding:.5rem 1rem;
+	margin-bottom:.5rem;
+	margin-top:.5rem;
+	font-family:'Quattrocento Sans', sans-serif;
+}
+#themeButton:hover{
+	cursor:pointer;
+}
 #themeRadio{
     font-size:1.5rem;
-    margin-top:.5rem;
+    margin:.5rem .5rem;
 }
 #fields{
 	font-size: 1rem;

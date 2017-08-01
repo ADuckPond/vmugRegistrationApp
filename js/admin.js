@@ -1,10 +1,10 @@
 $(document).ready(function(){
 	$("#popupImportButton").click(function(){
-        document.getElementById("importForm").style.width = "30%"
+        document.getElementById("importForm").style.width = "40%"
 	});
 
     $("#popupThemeButton").click(function(){
-		document.getElementById("themeForm").style.width = "30%";
+		document.getElementById("themeForm").style.width = "40%";
 	});
 
     $("#importClose").click(function(){
@@ -44,6 +44,39 @@ $(document).ready(function(){
         $.ajax({
             type: 'POST',
             url: '../php/adminButtons.php?action=reset',
+            data: formData,
+            async: false,
+            success: function(data){
+                window.alert(data);
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+    });
+
+    $('#themeSettings').on('submit',function(e){
+        
+        e.preventDefault();
+
+        var formData = new FormData(this);
+
+        $.ajax({
+            type: 'POST',
+            url: '../php/adminButtons.php?action=theme',
+            data: formData,
+            async: false,
+            success: function(){
+                location.reload();
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: '../php/upload.php?action=upload',
             data: formData,
             async: false,
             success: function(data){

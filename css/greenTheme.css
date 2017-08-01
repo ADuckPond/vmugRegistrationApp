@@ -6,8 +6,11 @@ p, h1{
 }
 
 /* adminCss Colors */
-input { 
+input{ 
 	background-color: white;
+}
+hr{
+	border-color:white;
 }
 
 /* Classes */
@@ -59,6 +62,10 @@ input[type="radio"]:checked + label span.radio::after{
 #content{
     border-color:white;
 }
+#homeColor{
+	color:black;
+	fill:currentColor;
+}
 
 /* indexCss Colors */
 #left{
@@ -78,14 +85,20 @@ input[type="radio"]:checked + label span.radio::after{
 #fileBrowserFormat{
 	background-color:#41D985;
 }
-#importButton{
-	background-color:#008D3F;
+#logoBrowserFormat{
+	background-color:#41D985;
 }
 #logoutButton{
     border-color:#008D3F;
 }
 #phpContent{
 	background-color:white;
+}
+#importButton{
+	background-color:#008D3F;
+}
+#themeButton{
+	background-color:#008D3F;
 }
 
 /* checkinCss Colors */

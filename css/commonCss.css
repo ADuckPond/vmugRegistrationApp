@@ -18,6 +18,10 @@ h1{
 	font-size:2rem;
 	margin:0;
 }
+img{
+    max-width:100%;
+    max-height:100%;
+}
 
 /* Classes */
 
@@ -43,13 +47,6 @@ h1{
     border-right:solid 1rem;
     border-bottom:solid 1rem;
 }
-#vmugPeople{
-	position:absolute;
-    left:0;
-    top:0;
-	padding-left:1rem;
-	height:100%;
-}
 #adminLogin{
     height:100%;
     padding-left:.25rem;
@@ -62,6 +59,26 @@ h1{
     padding-right:1rem;
 	padding-top:.2rem;
 	padding-bottom:.2rem;
+}
+#homeButton{
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    padding-left:1rem;
+}
+#homeImg{
+    height:100%;
+    float:left;
+}
+#homeIcon{
+    height:100%;
+    float:left;
+    margin-top:.5rem;
+}
+#homeSvg{
+    width:5rem;
+    height:auto;
 }
 #leftWrap{
     float:left;
