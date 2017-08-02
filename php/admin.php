@@ -168,7 +168,35 @@
 			</div>
 		</div>
 		<div id="phpContent">
-			
+			<div id="widgetCont">
+
+			</div>
+			<div id="raffle">
+				<div id="raffleLabel">
+					<p id="raffleHeader"> Raffle Winners </p>
+				</div>
+				<div id="winnerList">
+					<?php
+						$winnersQuery = "SELECT * FROM winners ORDER BY lastname ASC";
+						$winnersResult=pg_query($db,$winnersQuery);
+
+						while($row=pg_fetch_array($winnersResult)){
+										
+							$label="";
+							$checkVal="";
+
+							if($row['enabled'] == 't'){
+								$checkVal="checked";
+							}
+
+							$winner = "<p>" .$lastName. ", " .$firstName. "</p>";
+							$input = "<input type='radio' name='radio' id='" .$row['theme']. "' value='" .$row['theme']. "'" .$checkVal. ">";
+
+							echo $winner;
+						}
+					?>
+				</div>
+			</div>
 		</div>
     </div>
 

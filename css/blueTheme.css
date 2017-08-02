@@ -100,6 +100,16 @@ input[type="radio"]:checked + label span.radio::after{
 #themeButton{
 	background-color:#3399CC;
 }
+#raffle{
+	border-color:lightgrey;
+}
+#raffleLabel{
+	background-color:#67B8DE;
+	border-color:lightgrey;
+}
+#raffle{
+	background-color:#B4DCED;
+}
 
 /* checkinCss Colors */
 #credsForm{

@@ -205,6 +205,46 @@ a:hover{
 	float:left;
 	position:relative;
 }
+#widgetCont{
+	height:100%;
+	width:75%;
+	float:left;
+	position:relative;
+}
+#raffle{
+	height:100%;
+	width:25%;
+	float:left;
+	position:relative;
+	border-left:.1rem solid;
+	border-right:.1rem solid;
+}
+#raffleLabel{
+	width:100%;
+	border-bottom:.1rem solid;
+}
+#raffleHeader{
+	margin-left:1rem;
+	padding-top:.5rem;
+	padding-bottom:.5rem;
+	font-weight:bold;
+	font-size:1.25rem;
+}
+#winnerList{
+	width:100%;
+}
+#winNum{
+	position:relative;
+	float:left;
+	height:100%;
+	width:25%;
+}
+#winnerName{
+	position:relative;
+	float:left;
+	height:100%;
+	width:75%;
+}
 
 /* CUSTOM */
 ::-webkit-input-placeholder {
