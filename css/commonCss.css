@@ -12,7 +12,8 @@ body{
 }
 p{
     margin:0;
-	font-size:1rem;
+    font-size:1rem;
+    font-family:'Quattrocento Sans', sans-serif;
 }
 h1{
 	font-size:2rem;
@@ -75,10 +76,11 @@ img{
     height:100%;
     position:relative;
     float:left;
-    margin-top:.15rem;
+    margin-top:.4rem;
+    margin-left:.5rem;
 }
 #homeColor svg{
-    width:2rem;
+    width:1.5rem;
     height:auto;
 }
 #leftWrap{

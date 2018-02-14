@@ -12,6 +12,7 @@
         $email = pg_escape_string($_POST['email']);
         $exclude = pg_escape_string($_GET['radio']);
 
+        //Need to handle middle name / initials / weird last names
         $firstLast = explode(" ", $name);
         $firstName = $firstLast[0];
         $lastName = $firstLast[1];
@@ -21,7 +22,8 @@
         }else{
             $excludeValue = 'f';
         }
-
+        
+        //Need to output information in the event of duplicate names
         $querySelect = "SELECT * FROM members WHERE LOWER(firstname) = LOWER('$firstName') AND LOWER(lastname) = LOWER('$lastName') AND checkedin != 't'";
         $resultSelect = pg_query($db,$querySelect);
         $count = pg_num_rows($resultSelect);
