@@ -23,12 +23,10 @@
 
         $querySelect = "SELECT * FROM members WHERE LOWER(firstname) = LOWER('$firstName') AND LOWER(lastname) = LOWER('$lastName')";
         $resultSelect = pg_query($db,$querySelect);
-        $resultVal = pg_fetch_result($resultSelect);
-        print $resultVal;
         $count = pg_num_rows($resultSelect);
         if($count !== 1){
             $queryInsert = "INSERT INTO members(firstname, lastname, email, company, title, exclude, checkedin) VALUES('$firstName','$lastName','$email','$company','$title','$excludeValue','t')";
-            $resultInsert = pg_query($db,$queryUpdate);
+            $resultInsert = pg_query($db,$queryInsert);
         }else{
             $queryCheckedin = "SELECT * FROM members WHERE LOWER(firstname) = LOWER('$firstName') AND LOWER(lastname) = LOWER('$lastName') AND checkedin = 't'";
             $resultCheckedin = pg_query($db,$queryCheckedin);

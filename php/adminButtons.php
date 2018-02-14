@@ -73,11 +73,6 @@
         }
     }
 
-    // export function
-    if($action == 'export'){
-
-    }
-
     // reset function
     if($action == 'reset'){
 

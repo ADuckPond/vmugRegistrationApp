@@ -54,8 +54,8 @@
 				</div>
 			</div>
 			<div class="navBar navTextNoImport">
-				<form class="navForms" method="post">
-					<button id="exportButton" class="navButtons" type="Submit" name="Submit" value="export"><p>Export DB</p></button>
+				<form class="navForms" method="GET" action="../php/export.php">
+					<button id="exportButton" class="navButtons" type="Submit" name="export" value="export"><p>Export DB</p></button>
 				</form>
 			</div>
 			<div class="navBar navTextNoImport">
