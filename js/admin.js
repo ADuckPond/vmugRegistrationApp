@@ -3,16 +3,28 @@ $(document).ready(function(){
         document.getElementById("importForm").style.width = "40%"
 	});
 
+    $("#popupResetButton").click(function(){
+        document.getElementById("resetForm").style.width = "40%";
+    });
+
     $("#popupThemeButton").click(function(){
 		document.getElementById("themeForm").style.width = "40%";
-	});
+    });
 
     $("#importClose").click(function(){
         document.getElementById("importForm").style.width = "0";
     });
 
+    $("#resetClose").click(function(){
+        document.getElementById("resetForm").style.width = "0";
+    });
+
     $("#themeClose").click(function(){
         document.getElementById("themeForm").style.width = "0";
+    });
+
+    $("#successClose").click(function(){
+        document.getElementById("successAlert").style.width = "0";
     });
 
     $('#importFileForm').on('submit',function(e){
@@ -27,7 +39,11 @@ $(document).ready(function(){
             data: formData,
             async: false,
             success: function(data){
-                window.alert(data);
+                document.getElementById("successAlert").style.width = "100%";
+                document.getElementById("themeForm").style.width = "0";
+                setTimeout(function(){
+                    document.getElementById("successAlert").style.width = "0";
+                },2500);
             },
             cache: false,
             contentType: false,
@@ -47,7 +63,11 @@ $(document).ready(function(){
             data: formData,
             async: false,
             success: function(data){
-                window.alert(data);
+                document.getElementById("successAlert").style.width = "100%";
+                document.getElementById("resetForm").style.width = "0";
+                setTimeout(function(){
+                    document.getElementById("successAlert").style.width = "0";
+                },2500);
             },
             cache: false,
             contentType: false,

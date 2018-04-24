@@ -10,8 +10,8 @@
         // establish relative file name / path
         $fileName=$_FILES['importFile']['tmp_name'];
         // establish arrays for column selection
-        $names = array('Company','CompanyTitle');
-        $nameValue = array('Name');
+        $names = array('FirstName','LastName','Company','CompanyTitle');
+        // $nameValue = array('Name');
         // initialize required vars
         $picked = array();
         $theData = array();
@@ -26,23 +26,16 @@
                 // find values in first row and associate column numbers
                 if($isFirstRow){
                     for($c=0; $c < $numCols; $c++)
-                        // check for name field
-                        if(in_array($data[$c], $nameValue))
-                            $pickedName[] = $c;
-                        // check for other fields
-                        elseif(in_array($data[$c], $names))
+                        // check for fields matching values defined in names
+                        if(in_array($data[$c], $names))
                             $picked[] = $c;
-                    // set isFirstRow to false to move onto else block
+                    // set isFirstRow to false to move onto else block in next iteration
                     $isFirstRow = false;
                 }
                 else{
                     for($c=0; $c < $numCols; $c++)
-                        // check for the column number to match the column number for name then split the name field into first and last
-                        if(in_array($c, $pickedName)){
-                            $firstLast = explode(" ", $data[$c]);
-                            $row[] = $firstLast[0];
-                            $row[] = $firstLast[1];
-                        }elseif(in_array($c, $picked)){
+                        // check for the column number to match the column number for picked defined in first row logic
+                        if(in_array($c, $picked)){
                             $row[] = $data[$c];
                         }
                     $theData[] = $row;

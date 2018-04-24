@@ -49,7 +49,7 @@
 	<div id="content">
 		<div id="buttonContainer">
 			<div class="navBar" id="topNavButton">
-				<div id="popupImportButton" class="popup">
+				<div class="popup" id="popupImportButton">
 					<p class="navText">Import</p>
 				</div>
 			</div>
@@ -58,10 +58,10 @@
 					<button id="exportButton" class="navButtons" type="Submit" name="export" value="export"><p>Export DB</p></button>
 				</form>
 			</div>
-			<div class="navBar navTextNoImport">
-				<form id="reset" class="navForms" method="post">
-					<button id="resetButton" class="navButtons" type="Submit" name="reset" value="reset"><p>Reset DB</p></button>
-				</form>
+			<div class="navBar">
+				<div class="popup" id="popupResetButton">
+					<p class="navText">Reset DB</p>
+				</div>
 			</div>
 			<div class="navBar">
 				<div class="popup" id="popupThemeButton">
@@ -103,10 +103,21 @@
 				</div>
 			</div>
 		</div>
+		<div class="sideNav" id="resetForm">
+			<a href="javascript:void(0)" id="resetClose" class="closeBtn">&times;</a>
+			<div class="card text-center formDef" id="">
+				<h3 class="card-header" id="formHeader"> Are you sure you want to reset the database?</h3>
+				<div class="card-block" id="">
+					<form id="reset" class="navForms" method="post">
+						<button id="resetButton" class="navButtons" type="Submit" name="reset" value="reset"><p>Reset DB</p></button>
+					</form>
+				</div>
+			</div>
+		</div>
 		<div class="sideNav" id="themeForm">
 			<a href="javascript:void(0)" id="themeClose" class="closeBtn">&times;</a>
 			<div class="card text-center formDef" id="">
-			<h3 class="card-header" id="formHeader"> Modify Theme </h3>
+				<h3 class="card-header" id="formHeader"> Modify Theme </h3>
 				<div class="card-block" id="">
 					<form id="themeSettings" enctype="multipart/form-data" method="post">
 						<p>Select a color scheme:</p>
@@ -165,6 +176,12 @@
 						</div>
 					</form>
 				</div>
+			</div>
+		</div>
+		<div class="sideNav" id="successAlert">
+			<a href="javascript:void(0)" id="successClose" class="closeBtn">&times;</a>
+			<div class="card text-center formDef" id="">
+				<h3 class="card-header" id="formHeader">Successfully uploaded file</h3>
 			</div>
 		</div>
 		<div id="phpContent">
