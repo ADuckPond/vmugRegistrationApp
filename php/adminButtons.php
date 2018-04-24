@@ -28,14 +28,15 @@
                     for($c=0; $c < $numCols; $c++)
                         // check for fields matching values defined in names
                         if(in_array($data[$c], $names))
-                            $picked[] = $c;
+                            $picked[] =  [ "col" => $c, "val" => $data[$c] ];
                     // set isFirstRow to false to move onto else block in next iteration
                     $isFirstRow = false;
                 }
                 else{
                     for($c=0; $c < $numCols; $c++)
+                    print(array_column($picked,"col"));
                         // check for the column number to match the column number for picked defined in first row logic
-                        if(in_array($c, $picked)){
+                        if(array_column($picked, "col") === $c){
                             $row[] = $data[$c];
                         }
                     $theData[] = $row;
@@ -49,16 +50,17 @@
             $arrayLen = count($dataArray);
             // for each item in a row of data establish the different parts and set them to appropriate vars
             for( $c=0; $c < $arrayLen; $c++){
-                switch ($c){
-                    case 0:
-                        $first = $dataArray[$c]; 
-                    case 1:
-                        $last = $dataArray[$c];
-                    case 2:
-                        $company = $dataArray[$c];
-                    case 3:
-                        $title = $dataArray[$c];
-                }
+
+                //switch ($c){
+                //    case 0:
+                //        $first = $dataArray[$c]; 
+                //    case 1:
+                //        $last = $dataArray[$c];
+                //    case 2:
+                //        $company = $dataArray[$c];
+                //    case 3:
+                //        $title = $dataArray[$c];
+                //}
             }
             // import values from vars into db
             $queryInsert = "INSERT INTO members (firstname,lastname,company,title,prereg,timestamp) VALUES ('$first','$last','$company','$title','t','now')";

@@ -39,11 +39,12 @@ $(document).ready(function(){
             data: formData,
             async: false,
             success: function(data){
-                document.getElementById("successAlert").style.width = "100%";
-                document.getElementById("themeForm").style.width = "0";
-                setTimeout(function(){
-                    document.getElementById("successAlert").style.width = "0";
-                },2500);
+                //document.getElementById("successAlert").style.width = "100%";
+                //document.getElementById("themeForm").style.width = "0";
+                //setTimeout(function(){
+                //    document.getElementById("successAlert").style.width = "0";
+                //},2000);
+                window.alert(data);
             },
             cache: false,
             contentType: false,
@@ -67,7 +68,7 @@ $(document).ready(function(){
                 document.getElementById("resetForm").style.width = "0";
                 setTimeout(function(){
                     document.getElementById("successAlert").style.width = "0";
-                },2500);
+                },2000);
             },
             cache: false,
             contentType: false,
@@ -100,7 +101,7 @@ $(document).ready(function(){
             data: formData,
             async: false,
             success: function(data){
-                window.alert(data);
+                //window.alert(data);
             },
             cache: false,
             contentType: false,
