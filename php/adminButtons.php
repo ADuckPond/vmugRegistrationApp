@@ -28,16 +28,16 @@
                     for($c=0; $c < $numCols; $c++)
                         // check for fields matching values defined in names
                         if(in_array($data[$c], $names))
-                            $picked[] =  [ "col" => $c, "val" => $data[$c] ];
+                            $picked[] =  [ $c, $data[$c] ];
                     // set isFirstRow to false to move onto else block in next iteration
                     $isFirstRow = false;
                 }
                 else{
                     for($c=0; $c < $numCols; $c++)
-                    print(array_column($picked,"col"));
                         // check for the column number to match the column number for picked defined in first row logic
-                        if(array_column($picked, "col") === $c){
-                            $row[] = $data[$c];
+                        foreach($picked as $pick){
+                            if($c === $pick[0])
+                                $row[] = [ $pick[1], $data[$c] ];
                         }
                     $theData[] = $row;
                 }
@@ -47,21 +47,26 @@
         fclose($handle);
         // loop through the output array from the file
         foreach($theData as $dataArray){
-            $arrayLen = count($dataArray);
-            // for each item in a row of data establish the different parts and set them to appropriate vars
-            for( $c=0; $c < $arrayLen; $c++){
-
-                //switch ($c){
-                //    case 0:
-                //        $first = $dataArray[$c]; 
-                //    case 1:
-                //        $last = $dataArray[$c];
-                //    case 2:
-                //        $company = $dataArray[$c];
-                //    case 3:
-                //        $title = $dataArray[$c];
-                //}
+            foreach($dataArray as $thisData){
+                $arrayLen = count($thisData);
+                for( $c=0; $c < $arrayLen; $c++){
+                    switch ($thisData[0]){
+                        case "FirstName":
+                            $first = $thisData[1]; 
+                        case "LastName":
+                            $last = $thisData[1];
+                        case "Company":
+                            $company = $thisData[1];
+                        case "CompanyTitle":
+                            $title = $thisData[1];
+                    }
+                }
             }
+            
+            // for each item in a row of data establish the different parts and set them to appropriate vars
+            
+
+                
             // import values from vars into db
             $queryInsert = "INSERT INTO members (firstname,lastname,company,title,prereg,timestamp) VALUES ('$first','$last','$company','$title','t','now')";
             $resultInsert = pg_query($db,$queryInsert);
