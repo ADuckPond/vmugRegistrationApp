@@ -53,6 +53,11 @@
 					<button id="raffleButton" class="navButtons" type="Submit" name="raffle" value="raffle"><p>Start Raffle</p></button>
 				</form>
 			</div>
+			<div class="navBar navTextNoImport">
+				<form id="resetForm" class="navForms" method="post">
+					<button id="resetButton" class="navButtons" type="Submit" name="reset" value="reset"><p>Reset Winners</p></button>
+				</form>
+			</div>
 			<a href="logout.php">
 				<div class="navBar navTextNoImport" id="logoutButton">
 					<p>Logout</p>
@@ -67,12 +72,31 @@
 					</div>
 				</div>
 			</div>
+			<div class="raffleWin" id="collecting">
+				<div class="card text-center formDef" id="">
+					<h3 class="card-header" id="formHeader">Collecting names...</h3>
+				</div>
+			</div>
+			<div class="raffleWin" id="shaking">
+				<div class="card text-center formDef" id="">
+					<h3 class="card-header" id="formHeader">Shaking the hat...</h3>
+				</div>
+			</div>
 			<div class="raffleWin" id="raffleWinner">
 				<a href="javascript:void(0)" id="raffleClose" class="closeBtn">&times;</a>
 				<div class="card text-center formDef" id="">
 					<h3 class="card-header" id="formHeader">CONGRATULATIONS!</h3>
 					<div id="winnerResult">
+						<?php
+							$winnersQuery = "SELECT * FROM members WHERE haswon = 't' ORDER BY lastname ASC";
+							$winnerResult = pg_query($winnersQuery);
 
+							while($row=pg_fetch_array($winnersResult)){
+								$winner =  $row['lastname'] ;
+								$output = "<p>" . $winner . "</p>";
+								echo $winner;
+							}
+						?>
 					</div>
 				</div>
 			</div>
@@ -81,25 +105,7 @@
 					<p id="raffleHeader"> Raffle Winners </p>
 				</div>
 				<div id="winnerList">
-					<?php
-						$winnersQuery = "SELECT * FROM winners ORDER BY lastname ASC";
-						$winnersResult=pg_query($db,$winnersQuery);
-
-						while($row=pg_fetch_array($winnersResult)){
-										
-							$label="";
-							$checkVal="";
-
-							if($row['enabled'] == 't'){
-								$checkVal="checked";
-							}
-
-							$winner = "<p>" .$lastName. ", " .$firstName. "</p>";
-							$input = "<input type='radio' name='radio' id='" .$row['theme']. "' value='" .$row['theme']. "'" .$checkVal. ">";
-
-							echo $winner;
-						}
-					?>
+					
 				</div>
 			</div>
 		</div>

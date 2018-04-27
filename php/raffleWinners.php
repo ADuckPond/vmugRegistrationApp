@@ -6,14 +6,31 @@
     }
 
     if($action == 'spin'){
-        $pickWinnerQuery = "SELECT * FROM members WHERE haswon = 'f' ORDER BY random() LIMIT 1";
-		$pickWinnerResult = pg_query($db,$pickWinnerQuery);
+        $pickWinnerQuery = "SELECT * FROM members WHERE haswon = 'f' AND exclude = 'f' AND checkedin = 't' ORDER BY random() LIMIT 1";
+        $pickWinnerResult = pg_query($db,$pickWinnerQuery);
 		
-		while($row=pg_fetch_array($pickWinnerResult)){
-			$firstName = $row['firstname'];
-			$lastName = $row['lastname'];
-            $winner = $firstName . " " . $lastName;
-            echo $winner;
-		}
+		if($row=pg_fetch_array($pickWinnerResult)){
+			    $firstName = $row['firstname'];
+                $lastName = $row['lastname'];
+                $id = $row['id'];
+
+                $updateRecordQuery = "UPDATE members SET haswon = 't' WHERE id = '$id'";
+                $updateRecordResult = pg_query($db,$updateRecordQuery);
+
+                $winner = $firstName . " " . $lastName;
+                echo $winner;
+        }
+        else{
+            echo "No eligible attendees.";
+        }
+    }
+
+    if($action == 'reset'){
+        $resetHasWonQuery = "UPDATE members SET haswon = 'f'";
+        $resetHasWonResult = pg_query($db,$resetHasWonQuery);    
+    }
+
+    if($action == 'updateWinners'){
+           
     }
 ?>
