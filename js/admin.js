@@ -27,6 +27,32 @@ $(document).ready(function(){
         document.getElementById("successAlert").style.width = "0";
     });
 
+    $("#raffleClose").click(function(){
+        document.getElementById("raffleWinner").style.width = "0";
+    });
+
+    $('#raffleForm').on('submit',function(e){
+
+        e.preventDefault();
+
+        var formData = new FormData(this);
+
+        $.ajax({
+            type: 'POST',
+            url: '../php/raffleWinners.php?action=spin',
+            data: formData,
+            async: false,
+            success: function(data){
+                //window.alert(data);
+                document.getElementById("winnerResult").innerHTML = "<h1>" + data + "</h1>";
+                document.getElementById("raffleWinner").style.width = "100%";
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+    });
+
     $('#importFileForm').on('submit',function(e){
 
         e.preventDefault();
@@ -39,12 +65,11 @@ $(document).ready(function(){
             data: formData,
             async: false,
             success: function(data){
-                //document.getElementById("successAlert").style.width = "100%";
-                //document.getElementById("themeForm").style.width = "0";
-                //setTimeout(function(){
-                //    document.getElementById("successAlert").style.width = "0";
-                //},2000);
-                window.alert(data);
+                document.getElementById("successAlert").style.width = "100%";
+                document.getElementById("importForm").style.width = "0";
+                setTimeout(function(){
+                    document.getElementById("successAlert").style.width = "0";
+                },2000);
             },
             cache: false,
             contentType: false,

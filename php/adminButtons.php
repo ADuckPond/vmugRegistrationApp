@@ -48,7 +48,10 @@
         // loop through the output array from the file
         foreach($theData as $dataArray){
             foreach($dataArray as $thisData){
+                
                 $arrayLen = count($thisData);
+
+                // for each item in a row of data establish the different parts and set them to appropriate vars
                 for( $c=0; $c < $arrayLen; $c++){
                     switch ($thisData[0]){
                         case "FirstName":
@@ -62,10 +65,6 @@
                     }
                 }
             }
-            
-            // for each item in a row of data establish the different parts and set them to appropriate vars
-            
-
                 
             // import values from vars into db
             $queryInsert = "INSERT INTO members (firstname,lastname,company,title,prereg,timestamp) VALUES ('$first','$last','$company','$title','t','now')";

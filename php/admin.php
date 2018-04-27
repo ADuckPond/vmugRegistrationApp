@@ -73,6 +73,11 @@
 					<button id="exportButton" class="navButtons" type="Submit" name="testPrint" value="testPrint"><p>Printer Test</p></button>
 				</form>
 			</div>
+			<div class="navBar navTextNoImport">
+				<form action="raffle.php" class="navForms" method="post">
+					<button id="raffleButton" class="navButtons" type="Submit" name="raffle" value="raffle"><p>Raffle</p></button>
+				</form>
+			</div>
 			<a href="logout.php">
 				<div class="navBar navTextNoImport" id="logoutButton">
 					<p>Logout</p>
