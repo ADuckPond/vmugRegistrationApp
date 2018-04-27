@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    
+    $("#successClose").click(function(){
+        document.getElementById("success").style.width = "0";
+    });
+    
     $('#registerForm').on('submit',function(e){
 
         e.preventDefault();
@@ -11,7 +16,12 @@ $(document).ready(function(){
             data: formData,
             async: false,
             success: function(data){
-                window.alert(data);
+                document.getElementById("success").style.width = "100%";
+                setTimeout(function(){
+                    document.getElementById("success").style.width = "0";
+                    location.href = "../index.html";
+                },5000);
+
             },
             cache: false,
             contentType: false,

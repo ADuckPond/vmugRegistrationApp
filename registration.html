@@ -46,27 +46,36 @@
 	</div>
 	<div id="content">
 		<div class="card text-center" id="credsForm">
-                <h3 class="card-header" id="formHeader"> VMUG Walk-on Registration </h3>
-                <div class="card-block" id="fields">
-                    <form autocomplete="off" id="registerForm" method="post">
-                        <input type="text" name="firstName" placeholder="First Name"/><br/>
-                        <input type="text" name="lastName" placeholder="Last Name"/><br/>
-                        <input type="email" name="email" placeholder="E-mail"/><br/>
-                        <input type="text" name="company" placeholder="Company"/><br/>
-                        <input type="text" name="title" placeholder="Title"/><br/>
-                        <p id="drawingRadio">Exclude from Drawings?</p><hr/>
-                        <section class="section">
-                            <div class="radioButtons">
-                                <input type="radio" name="radio" id="yes" value="yes">
-                                <label id="yesLabel" class="radioLabel" for="yes"><span class="radio">Yes</span></label>
-                                <input type="radio" name="radio" id="no" value="no" checked>
-                                <label for="no" class="radioLabel"><span class="radio">No</span></label>
-                            </div>
-                        </section>
-                        <button id="loginButton" type="Submit" name="Submit" value="Submit">Check-in</button>
-                    </form>
-                </div>
+            <h3 class="card-header" id="formHeader"> VMUG Walk-on Registration </h3>
+            <div class="card-block" id="fields">
+                <form autocomplete="off" id="registerForm" method="post">
+                    <input type="text" name="firstName" placeholder="First Name"/><br/>
+                    <input type="text" name="lastName" placeholder="Last Name"/><br/>
+                    <input type="email" name="email" placeholder="E-mail"/><br/>
+                    <input type="text" name="company" placeholder="Company"/><br/>
+                    <input type="text" name="title" placeholder="Title"/><br/>
+                    <p id="drawingRadio">Exclude from Drawings?</p><hr/>
+                    <section class="section">
+                        <div class="radioButtons">
+                            <input type="radio" name="radio" id="yes" value="yes">
+                            <label id="yesLabel" class="radioLabel" for="yes"><span class="radio">Yes</span></label>
+                            <input type="radio" name="radio" id="no" value="no" checked>
+                            <label for="no" class="radioLabel"><span class="radio">No</span></label>
+                        </div>
+                    </section>
+                    <button id="loginButton" type="Submit" name="Submit" value="Submit">Check-in</button>
+                </form>
             </div>
+		</div>
+		<div class="sideNav" id="success">
+			<a href="javascript:void(0)" id="successClose" class="closeBtn">&times;</a>
+			<div class="card text-center formDef" id="">
+				<h3 class="card-header" id="formHeader"> Successfully Registered!</h3>
+				<div class="card-block" id="">
+					<p>Please take your name tag.</p>
+				</div>
+			</div>
+		</div>
     </div>
 
 <script type="text/javascript">
